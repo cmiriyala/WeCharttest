@@ -1147,7 +1147,10 @@ set_time_limit(0);
                 url: '{{route('post_feedback')}}',
                 data: { feedback:$("textarea").val() ,patient_id:$('#patient_id').val(), user_id:$('#user_id').val()}
             });
-            swal("Feedback saved successfully!");
+            swal("Feedback saved successfully!", {
+                buttons: false,
+                timer: 3000,
+            });
         });
 
     });
