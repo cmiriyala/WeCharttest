@@ -1149,7 +1149,7 @@ set_time_limit(0);
             });
             swal("Feedback saved successfully!", {
                 buttons: false,
-                timer: 3000,
+                timer: 1500,
             });
         });
 
