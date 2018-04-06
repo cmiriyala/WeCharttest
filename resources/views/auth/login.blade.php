@@ -170,9 +170,8 @@
 
 <nav class="navbar navbar-inverse navbar-static-top" id="navigation_bar"></nav>
 
-<img src="/logos/footer.png" alt="Footer" style="width: 100%; height: 35%;margin-top: 14.5%">
-<img src="/logos/unmc.png" alt="UNMC logo" style="width: 5%; height: 8%; left: 47%; top: 96%;">
-
+<img src="{{ URL::asset('logos/footer.png') }}" alt="Footer" style="width: 100%; height: 35%;margin-top: 14.5%">
+<img src="{{ URL::asset('logos/unmc.png') }}" style="width: 5%; height: 8%; left: 47%; top: 96%;">
 
 <div class="loginBox">
     <img src="/logos/login_panel.png" alt="LoginPanel">
