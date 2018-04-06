@@ -81,7 +81,7 @@
                                         <thead>
                                         <tr class="bg-info">
                                             <th>List of Diagnosis</th>
-                                            <th>Delete</th>
+                                            <th>Action</th>
                                         </tr>
                                         </thead>
                                         <tbody>

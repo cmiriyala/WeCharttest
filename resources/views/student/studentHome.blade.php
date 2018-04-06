@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
     <style type="text/css">
         
     #module_wrap 
@@ -337,9 +337,7 @@ $(".pluss").hide();
 });
     });
 
-        $('.confirmation').on('click', function () {
-            return confirm('Are you sure you want to delete this patient? This action is irreversible.');
-        });
+
 
        function Delete() {
                 var x = confirm("Are you sure you want to delete?");

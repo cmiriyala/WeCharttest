@@ -261,7 +261,6 @@
                            // alert($(row).find(".linktest").html())
                             arr.push($(row).find(".linktest").html());
                             arr.push(value);
-                            alert(arr);
 
                             $.ajax({
                                 headers: {
