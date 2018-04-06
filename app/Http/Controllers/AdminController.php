@@ -210,8 +210,8 @@ class AdminController extends Controller
             Log::info($request['tag'][$i]);
             Log::info($request['link'][$i]);
             Log::info($_POST['type'][$i]);
-            $exist_tag = media_lookup_value::where('media_lookup_value_tag', $request['tag'][$i])->where('media_lookup_value_type', $_POST['type'][$i])->pluck('media_lookup_value_tag');
-            $exist_link = media_lookup_value::where('media_lookup_value_link', $request['link'][$i])->where('media_lookup_value_type', $_POST['type'][$i])->pluck('media_lookup_value_link');
+            $exist_tag = media_lookup_value::where('media_lookup_value_tag', $request['tag'][$i])->pluck('media_lookup_value_tag');
+            $exist_link = media_lookup_value::where('media_lookup_value_link', $request['link'][$i])->pluck('media_lookup_value_link');
             if (($exist_tag->count()) > 0) {
                 DB::table('media_lookup_value')->where('media_lookup_value_tag', $request['tag'][$i])->update(['archived' => 'true']);
             } elseif (($exist_link->count()) > 0) {

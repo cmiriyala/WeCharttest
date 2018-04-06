@@ -83,11 +83,13 @@
                             </div>
                         </div>
                         <div class="form-group" style="padding-top: 20px;">
-                            <div align="center">
-                                <button type="submit" class="btn btn-primary" id="savemedia">
-                                    <i class="fa fa-floppy-o" aria-hidden="true"></i> &nbsp;Save
-                                </button>
-                            </div>
+                            <center>
+                                <div>
+                                    <button type="submit" class="btn btn-primary" id="savemedia">
+                                        <i class="fa fa-floppy-o" aria-hidden="true"></i> &nbsp;Save
+                                    </button>
+                                </div>
+                            </center>
                         </div>
                     </form>
                 </div>
@@ -198,7 +200,7 @@
                     for (var i = 0; i < saveelems.length; i++){
                         saveelems[i].style.display='none';
                     }
-                    var htmlData = '<select id="optionselect" class="optionselect" required><option></option><option value="Audio">Audio</option><option value="Video">Video</option><option value="Image">Image</option></select>';
+                    var htmlData = '<select id="optionselect" class="optionselect form-control" required><option></option><option value="Audio">Audio</option><option value="Video">Video</option><option value="Image">Image</option></select>';
                     var type;
                     $(row).find(".editButton").click(function(){
                         var id=$(row).attr("id");
