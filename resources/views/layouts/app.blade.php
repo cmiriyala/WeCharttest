@@ -14,28 +14,125 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        
+        #navigation_bar li a:hover{
+            background-color: #ffffff;
+        }
+
+        #navigation_bar li.active  a {
+            background-color: #ffffff;
+        }
+
+        
+
+        .side-menu-wrapper { /* style menu wrapper */
+            overflow: hidden;
+            background: #5DADE2;
+            padding: 40px 0 0 20px;
+            position: fixed; /* Fixed position */
+            top: 0;
+            right: -290px; /* Sidebar initial position. "right" for right positioned menu */
+            height: 100%;
+            z-index: 2;
+            transition: 0.5s; /* CSS transition speed */
+            width: 200px;
+            font: 30px;
+            font-style: bold;
+            opacity: 0.8;
+        }
+        .side-menu-wrapper > ul{ /* css ul list style */
+            list-style:none;
+            padding:0;
+            margin:0;
+            overflow-y: auto; /* enable scroll for menu items */
+            width:500px; /* this width will hide scroll bar */
+            height:95%;
+        }
+        .side-menu-wrapper > ul > li > a { /* links */
+            display: block;
+            border-bottom: ;
+            padding: 6px 4px 6px 4px;
+            color: #000000;
+            transition: 0.3s;
+            text-decoration: none;
+            font: 30px;
+            font-style: bold;
+
+        }
+        .side-menu-wrapper > a.menu-close { /* close button */
+            padding: 8px 0 4px 23px;
+            color: #000000;
+            display:block;
+            margin: -30px 0 -10px -20px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .side-menu-overlay { /* overlay */
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.7);
+            overflow-y: auto;
+            overflow-x: hidden;
+            text-align: center;
+            opacity: 0.5;
+            transition: opacity 1s;
+        }
+
+         #myBtn {
+              display: none;
+              position: fixed;
+              bottom: 20px;
+              right: 30px;
+              z-index: 99;
+              font-size: 12px;
+              border: none;
+              outline: none;
+              background-color: #5DADE2;
+              color: white;
+              cursor: pointer;
+              padding: 15px;
+              border-radius: 4px;
+        }
+
+    </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top" style="background-color: #5DADE2;">
-            <div class="container">
+    @guest
+    
+    @else
+        
+        <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #5DADE2;" id="navigation_bar">
+            <div class="container-fluid">
                 <div class="navbar-header">
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                        @if(Auth::user()->role == 'Student')
+                        
+                           <a class="navbar-brand" href="/StudentHome">
+                                <img src="{{ URL::asset('logos/WeChart.png') }}" height="150%">
+                           </a> 
+                        
+                        @elseif(Auth::user()->role == 'Instructor')
+                            
+                            <a class="navbar-brand" href="/InstructorHome">
+                                <img src="{{ URL::asset('logos/WeChart.png') }}" height="150%">
+                            </a>
 
-                    <!-- Branding Image -->
-                        <a class="navbar-brand" >
-                            <img src="{{ URL::asset('logos/WeChart.png') }}" height="150%">
-                        </a>
+                        @else
+                            <a class="navbar-brand" href="/home">
+                                <img src="{{ URL::asset('logos/WeChart.png') }}" height="150%">
+                            </a> 
+                        @endif    
+                    
                   </div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <div >
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;
@@ -43,45 +140,44 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a style="color: darkblue" href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;<b>Login</b></a></li>
-                            <li><a style="color: darkblue" href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;<b>Register</b></a></li>
-                        @else
-                            <li> <a id="role" style="color: darkblue"> <b>Role: {{ Auth::user()->role}}</b></a></li>
-                            <li class="dropdown">
-
-                                <a href="#" style="color: darkblue" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                   <b> {{ Auth::user()->firstname }} &nbsp;{{ Auth::user()->lastname}} <span class="caret"></span></b>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                     <li>
-                                         <a href="{{ URL::route('EditProfile', Auth::user()->id) }}">
-                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <li> <a id="role" style="color: darkblue"> <b>Role: {{ Auth::user()->role}}</b></a></li>
+                        <li>
+                            <a href="#" class="slide-menu-open" style="color: darkblue"><b>{{ Auth::user()->firstname }} &nbsp;{{ Auth::user()->lastname}} &nbsp;</b><i class="fa fa-arrow-left"></i></a>
+                            <div class="side-menu-overlay" style="width: 0px; opacity: 0;"></div>
+                            <div class="side-menu-wrapper">
+                                <a href="#" class="menu-close"><i class="fa fa-arrow-right"></i></a>
+                                <br>
+                                <ul>
+                                    <li>
+                                        <a href="{{ URL::route('EditProfile', Auth::user()->id) }}">
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                             Edit Profile
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             <i class="fa fa-sign-out" aria-hidden="true"></i>
                                             Logout
                                         </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}
                                         </form>
                                     </li>
                                 </ul>
-                            </li>
-                        @endguest
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        @yield('content')
+       
+    @endguest
+    <div class="edokati">
+        <br>
+        <br>
+        <br>
+    @yield('content')
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>  
+</div>
     </div>
 
     <!-- Scripts -->
@@ -89,6 +185,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+        var slidebar_width  = 290; //slidebar width + padding size
+        var slide_bar       = $(".side-menu-wrapper"); //slidebar
+        var slide_open_btn  = $(".slide-menu-open"); //slidebar close btn
+        var slide_close_btn = $(".menu-close"); //slidebar close btn
+        var overlay         = $(".side-menu-overlay"); //slidebar close btn
 
+        slide_open_btn.click(function(e){
+            e.preventDefault();
+            slide_bar.css( {"right": "0px"}); //change to "right" for right positioned menu
+            overlay.css({"opacity":"1", "width":"100%"});
+
+            $(".side-menu-overlay").click(function(){
+
+                e.preventDefault();
+                slide_bar.css({"right": "-"+ slidebar_width + "px"}); //change to "right" for right positioned menu
+                overlay.css({"opacity":"0", "width":"0"});
+
+            });
+
+        });
+        slide_close_btn.click(function(e){
+            e.preventDefault();
+            slide_bar.css({"right": "-"+ slidebar_width + "px"}); //change to "right" for right positioned menu
+            overlay.css({"opacity":"0", "width":"0"});  
+        });
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+            document.getElementById("myBtn").style.display = "block";
+        } 
+        else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+// When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+
+    </script>
 </body>
 </html>
