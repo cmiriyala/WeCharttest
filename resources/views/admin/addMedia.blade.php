@@ -16,19 +16,24 @@
 
 
 </style>
+
 @extends('layouts.app')
 @section('content')
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
-    <select value="B">
-        <option value="A">Apple</option>
-        <option value="B">Banana</option>
-        <option value="C">Cranberry</option>
-    </select>
+
+    {{--    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />--}}
+
+
+
+  {{--  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/dataTables.bootstrap.min.js"></script>--}}
+
     <div class="container" style="width: 85%">
         <div class="col-md-10 col-md-offset-1">
             <div class="row" style="padding-bottom: 20px;">
@@ -117,19 +122,15 @@
     </div>
     <div class="container" style="width: 85%">
         <div class="col-md-10 col-md-offset-1">
-            <div class="panel-body">
+            {{--<div class="panel-body">--}}
 
-                <div class="navbar-right">
-                    <div class="row">
-                        <div class="col-md-10"><input id="search_media" type="text" class="form-control" name="search" placeholder="Search Media..."></div>
-                        <div class="col-md-1"><button id="clearsearch" autocomplete="off" class="close" type="button"><i class="fa fa-close" style="font-size:22px;color:#DD0000"></i></button></div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-body">
-                <div class="row"> <div class="col-md-3"></div><div class="col-md-6"><div id="myaudio"></div></div><div class="col-md-3"></div></div>
-
-            </div>
+                {{--<div class="navbar-right">--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-md-10"><input id="search_media" type="text" class="form-control" name="search" placeholder="Search Media..."></div>--}}
+                        {{--<div class="col-md-1"><button id="clearsearch" autocomplete="off" class="close" type="button"><i class="fa fa-close" style="font-size:22px;color:#DD0000"></i></button></div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
             <div class="panel panel-default" style="margin-bottom: 0;padding-bottom: 0">
                 <div class="panel-body">
@@ -139,24 +140,20 @@
                             <th><i aria-hidden="true"></i> Name</th>
                             <th><i aria-hidden="true"></i> Type</th>
                             <th><i aria-hidden="true"></i> Link</th>
-                            <th colspan="3"> Actions </th>
+                            <th colspan="2"> Actions </th>
+                            <th id="lasthead"> </th>
                         </tr>
                         </thead>
                         <?php $rownum=0; ?>
-                        <tbody id="tmediabody">
+                        <tbody>
                         @foreach ($media as $mediarow)
                             <?php $rownum=$rownum+1; ?>
-                            <tr>
+                            <tr id="<?php echo $rownum ?>">
                                 <td><?php echo($mediarow->media_lookup_value_tag); ?> </td>
-                                <td class ="selectop"><select id="optionselect" class="optionselect" required><option></option>
-                                        <option value="Audio">Audio</option>
-                                        <option value="Video">Video</option>
-                                        <option value="Image">Image</option>
-                                    </select>
+                                <td class="<?php echo "selectop".$rownum ?>">
                                     <p class="display"><?php echo($mediarow->media_lookup_value_type); ?></p>
                                 </td>
-                                <td><?php echo($mediarow->media_lookup_value_link); ?></td>
-                                <td><a href = "<?php echo($mediarow->media_lookup_value_link); ?>" target="_blank"  class="btn btn-default" id="audlink<?php echo $rownum ?>" ><i class="fa fa-link" aria-hidden="true" style="color:#A569BD"></i></a></td>
+                                <td><a class="linktest" href="<?php echo($mediarow->media_lookup_value_link); ?>" target="_blank"> <?php echo($mediarow->media_lookup_value_link); ?></a></td>
                                 <td>
                                     <button class="editButton btn btn-info" id="<?php echo $rownum ?>"><i class="fa fa-edit" aria-hidden="true"></i></button>
                                     <button class="saveButton btn btn-success" id="<?php echo $rownum ?>" value="{{$mediarow->media_lookup_value_id}}"><i class="fa fa-save" aria-hidden="true"></i></button>
@@ -171,7 +168,7 @@
                         </tbody>
                     </table>
 
-                    {{ $media->links() }}
+                    {{--{{ $media->links() }}--}}
 
                 </div>
             </div>
@@ -182,101 +179,116 @@
 
         $(document).ready(function () {
 
-            cssProp();
-            function cssProp() {
-                var saveelems = document.getElementsByClassName('saveButton');
-
-                for (var i = 0; i < saveelems.length; i++){
-                    saveelems[i].style.display='none';
-                }
-
-                var optionselect = document.getElementsByClassName('optionselect');
-
-                for (var i = 0; i < optionselect.length; i++){
-                    optionselect[i].style.display='none';
-                }
-
-            }
-
-            $('#search_media').on('keyup',function(){
-                $value=$(this).val();
-                $.ajax({
-                    type : 'get',
-                    url : '{{url("SearchMedia")}}',
-                    data:{'search':$value},
-                    success:function(data){
-                        $('#tmediabody').html(data);
-                        cssProp();
-                        $(".editButton").click(function(){
-                            var id = $(this).attr('id');
-                            $(this).closest("tr").find("td:nth-child(1)").css({'border-top' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(1)").css({'border-bottom' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(1)").css({'border-left' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(2)").css({'border-top' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(2)").css({'border-bottom' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(3)").css({'border-top' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(3)").css({'border-bottom' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(3)").css({'border-right' : '2px #5DADE2 solid'});
-
-
-                            //border-collapse: collapse;
-                            edit(id);
-                        });
-                        $(".saveButton").click(function(){
-                            var id = $(this).attr('id');
-                            var value=$(this).attr('value');
-                            $(this).closest("tr").find("td:nth-child(1)").css({'border-top' : ''});
-                            $(this).closest("tr").find("td:nth-child(1)").css({'border-bottom' : ''});
-                            $(this).closest("tr").find("td:nth-child(1)").css({'border-left' : ''});
-                            $(this).closest("tr").find("td:nth-child(2)").css({'border-top' : ''});
-                            $(this).closest("tr").find("td:nth-child(2)").css({'border-bottom' : ''});
-                            $(this).closest("tr").find("td:nth-child(3)").css({'border-top' : ''});
-                            $(this).closest("tr").find("td:nth-child(3)").css({'border-bottom' : ''});
-                            $(this).closest("tr").find("td:nth-child(3)").css({'border-right' : ''});
-                            save(id,value);
-                        });
+            $('#lasthead').hide();
+            $('#media_table').DataTable({
+                "pagingType": "full_numbers",
+                "paging": true,
+                "lengthChange": false,
+                "lengthMenu": [6],
+                "columns": [
+                    null,
+                    null,
+                    { "searchable": false },
+                    { "searchable": false },
+                    { "searchable": false }
+                ],
+                "dom": 'l<"toolbar">frtip',
+                "createdRow": function( row, data, dataIndex ) {
+                    var saveelems = $(row).find('.saveButton');
+                    for (var i = 0; i < saveelems.length; i++){
+                        saveelems[i].style.display='none';
                     }
-                });
+                    var htmlData = '<select id="optionselect" class="optionselect" required><option></option><option value="Audio">Audio</option><option value="Video">Video</option><option value="Image">Image</option></select>';
+                    var type;
+                    $(row).find(".editButton").click(function(){
+                        var id=$(row).attr("id");
+                        console.log(id);
+                        var idn=".selectop"+id;
+                        $(row).find("td:nth-child(1)").css({'border-top' : '2px #5DADE2 solid'});
+                        $(row).find("td:nth-child(1)").css({'border-bottom' : '2px #5DADE2 solid'});
+                        $(row).find("td:nth-child(1)").css({'border-left' : '2px #5DADE2 solid'});
+                        $(row).find("td:nth-child(2)").css({'border-top' : '2px #5DADE2 solid'});
+                        $(row).find("td:nth-child(2)").css({'border-bottom' : '2px #5DADE2 solid'});
+                        $(row).find("td:nth-child(3)").css({'border-top' : '2px #5DADE2 solid'});
+                        $(row).find("td:nth-child(3)").css({'border-bottom' : '2px #5DADE2 solid'});
+                        $(row).find("td:nth-child(3)").css({'border-right' : '2px #5DADE2 solid'});
+                        $(row).find(idn).append(htmlData);
+
+                        $(row).find('.editButton').css('display','none');
+                        $(row).find('.saveButton').css('display','inline-block');
+                        $(row).find('.display').css('display','none');
+                        $(row).find("td:nth-child(1)").prop("contentEditable",true);
+                        $(row).find("td:nth-child(2)").prop("contentEditable",true);
+                       // $(row).find("td:nth-child(3)").prop("contentEditable",true);
+                        $(row).find(".linktest").prop("contentEditable",true);
+
+
+                    });
+                    $(row).find(".saveButton").click(function(){
+                        var id=$(row).attr("id");
+                        var idn=".selectop"+id;
+                        var value=$(row).find(".saveButton").attr('value');
+                        var arr = new Array();
+                        type = $(row).find('.optionselect').val();
+                        console.log(type);
+                        if(type!='Audio' && type!='Video' && type!='Image' ){
+                            alert("Please Select Type");
+                        }else{
+                            $(row).find("td:nth-child(1)").css({'border-top' : ''});
+                            $(row).find("td:nth-child(1)").css({'border-bottom' : ''});
+                            $(row).find("td:nth-child(1)").css({'border-left' : ''});
+                            $(row).find("td:nth-child(2)").css({'border-top' : ''});
+                            $(row).find("td:nth-child(2)").css({'border-bottom' : ''});
+                            $(row).find("td:nth-child(3)").css({'border-top' : ''});
+                            $(row).find("td:nth-child(3)").css({'border-bottom' : ''});
+                            $(row).find("td:nth-child(3)").css({'border-right' : ''});
+                            $(row).find('.editButton').css('display','inline-block');
+                            $(row).find('.saveButton').css('display','none');
+                            $(row).find('.optionselect').css('display','none');
+                            $(row).find('.optionselect').remove();
+                            $(row).find('.display').css('display','inline-block');
+                            $(row).find('.display').text(type);
+                            $(row).find("td:nth-child(1)").prop("contentEditable",false);
+                            $(row).find("td:nth-child(2)").prop("contentEditable",false);
+                            $(row).find("td:nth-child(3)").prop("contentEditable",false);
+                            $(row).find(".linktest").prop("contentEditable",false);
+
+
+                            arr.push($(row).find("td:nth-child(1)").html());
+                            arr.push(type);
+                           // alert($(row).find(".linktest").html())
+                            arr.push($(row).find(".linktest").html());
+                            arr.push(value);
+                            alert(arr);
+
+                            $.ajax({
+                                headers: {
+                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                },
+                                type: "post",
+                                url: '{{route('post_new_media')}}',
+                                data: { name:arr[0] ,link:arr[2], type:arr[1], id:arr[3]}
+
+
+                            });
+
+                            $(row).find('.linktest').prop("href",arr[2]);
+
+                            var mytable = $('#media_table').DataTable();
+                            mytable.search('').draw();
+                            mytable.columns.adjust().draw();
+
+                        }
+                    });
+
+                }
+
             });
 
+            $("div.toolbar").html('<button id="clearsearch" autocomplete="off" class="close" type="button"><i class="fa fa-close" style="font-size:22px;color:#DD0000"></i></button>');
+            var medtable = $('#media_table').DataTable();
             $("#clearsearch").click(function(event){
-
-                $('#search_media').val('');
-                $.ajax({
-                    type : 'get',
-                    url : '{{url("SearchMedia")}}',
-                    data:{'search':""},
-                    success:function(data){
-                        $('#tmediabody').html(data);
-                        cssProp();
-                        $(".editButton").click(function(){
-                            var id = $(this).attr('id');
-                            $(this).closest("tr").find("td:nth-child(1)").css({'border-top' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(1)").css({'border-bottom' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(1)").css({'border-left' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(2)").css({'border-top' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(2)").css({'border-bottom' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(3)").css({'border-top' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(3)").css({'border-bottom' : '2px #5DADE2 solid'});
-                            $(this).closest("tr").find("td:nth-child(3)").css({'border-right' : '2px #5DADE2 solid'});
-                            edit(id);
-
-                        });
-                        $(".saveButton").click(function(){
-                            var id = $(this).attr('id');
-                            var value=$(this).attr('value');
-                            $(this).closest("tr").find("td:nth-child(1)").css({'border-top' : ''});
-                            $(this).closest("tr").find("td:nth-child(1)").css({'border-bottom' : ''});
-                            $(this).closest("tr").find("td:nth-child(1)").css({'border-left' : ''});
-                            $(this).closest("tr").find("td:nth-child(2)").css({'border-top' : ''});
-                            $(this).closest("tr").find("td:nth-child(2)").css({'border-bottom' : ''});
-                            $(this).closest("tr").find("td:nth-child(3)").css({'border-top' : ''});
-                            $(this).closest("tr").find("td:nth-child(3)").css({'border-bottom' : ''});
-                            $(this).closest("tr").find("td:nth-child(3)").css({'border-right' : ''});
-                            save(id,value);
-                        });
-                    }
-                });
+                medtable.search('').draw();
             });
 
             $(".alert").fadeOut(5000);
@@ -302,84 +314,7 @@
             $('#medias_form').change(function() {
                 inputsChanged = true;
             });
-            function edit(id) {
-                var id_class = id-1;
 
-                document.getElementsByClassName('editButton')[id_class].style.display='none';
-                document.getElementsByClassName('saveButton')[id_class].style.display='inline-block';
-                document.getElementsByClassName('optionselect')[id_class].style.display='inline-block';
-                document.getElementsByClassName('display')[id_class].style.display='none';
-
-                document.getElementById("media_table").rows[id].cells[0].contentEditable='true';
-                document.getElementById("media_table").rows[id].cells[1].contentEditable='true';
-                document.getElementById("media_table").rows[id].cells[2].contentEditable='true';
-            }
-
-            $(".editButton").click(function(){
-                var id = $(this).attr('id');
-                $(this).closest("tr").find("td:nth-child(1)").css({'border-top' : '2px #5DADE2 solid'});
-                $(this).closest("tr").find("td:nth-child(1)").css({'border-bottom' : '2px #5DADE2 solid'});
-                $(this).closest("tr").find("td:nth-child(1)").css({'border-left' : '2px #5DADE2 solid'});
-                $(this).closest("tr").find("td:nth-child(2)").css({'border-top' : '2px #5DADE2 solid'});
-                $(this).closest("tr").find("td:nth-child(2)").css({'border-bottom' : '2px #5DADE2 solid'});
-                $(this).closest("tr").find("td:nth-child(3)").css({'border-top' : '2px #5DADE2 solid'});
-                $(this).closest("tr").find("td:nth-child(3)").css({'border-bottom' : '2px #5DADE2 solid'});
-                $(this).closest("tr").find("td:nth-child(3)").css({'border-right' : '2px #5DADE2 solid'});
-                edit(id);
-
-            });
-            function save(id,value) {
-                var id_class = id-1;
-                var arr = new Array();
-                var type=document.getElementsByClassName('optionselect')[id_class].value;
-                if(type!='Audio' && type!='Video' && type!='Image' ){
-                    alert("Please select type")
-                }else{
-                    document.getElementsByClassName('editButton')[id_class].style.display='inline-block';
-                    document.getElementsByClassName('saveButton')[id_class].style.display='none';
-                    document.getElementsByClassName('optionselect')[id_class].style.display='none';
-                    document.getElementsByClassName('display')[id_class].style.display='inline-block';
-                    document.getElementsByClassName('display')[id_class].innerHTML=type;
-                    document.getElementById("media_table").rows[id].cells[0].contentEditable='false';
-                    document.getElementById("media_table").rows[id].cells[1].contentEditable='false';
-                    document.getElementById("media_table").rows[id].cells[2].contentEditable='false';
-                    arr.push(document.getElementById("media_table").rows[id].cells[0].innerHTML);
-                    //arr.push(type);
-                    arr.push(document.getElementById("media_table").rows[id].cells[2].innerHTML);
-                    arr.push(value);
-                    //alert(arr[1]);
-                    //alert(document.getElementById("media_table").rows[id].cells[1].innerHTML);
-
-
-                    $.ajax({
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
-                        type: "post",
-                        url: '{{route('post_new_media')}}',
-                        data: { name:arr[0] ,link:arr[2], type:arr[1], id:arr[3]}
-
-
-                    });
-                    var audli = '#audlink'+id;
-                    $(audli).attr("href",arr[2])
-
-                }
-            }
-
-            $(".saveButton").click(function(){
-                var id = $(this).attr('id');
-                var value=$(this).attr('value');
-                $(this).closest("tr").find("td:nth-child(1)").css({'border-top' : ''});
-                $(this).closest("tr").find("td:nth-child(1)").css({'border-bottom' : ''});
-                $(this).closest("tr").find("td:nth-child(1)").css({'border-left' : ''});
-                $(this).closest("tr").find("td:nth-child(2)").css({'border-top' : ''});
-                $(this).closest("tr").find("td:nth-child(2)").css({'border-bottom' : ''});
-                $(this).closest("tr").find("td:nth-child(3)").css({'border-top' : ''});
-                $(this).closest("tr").find("td:nth-child(3)").css({'border-bottom' : ''});
-                $(this).closest("tr").find("td:nth-child(3)").css({'border-right' : ''});
-                save(id,value);
-            });
 
             $("#savemedia").click(function() {
                 var len = $(".tag").length;
@@ -407,6 +342,7 @@
             else
                 return false;
         }
+
 
 
     </script>
