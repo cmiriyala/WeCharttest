@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <br>
-    <br>
 <div class="container">
  @if(empty($user))
     <div class="row">
@@ -46,8 +44,6 @@
             </div>
         </div>
     </div>
-        <br>
-        <br>
  @endif
 
 <!-- After user submits request --> 
@@ -156,9 +152,6 @@
         </div>
 </div>
 @endIf
-     <br>
-     <br>
-     <br>
-    <br>
+
 </div>
 @endsection

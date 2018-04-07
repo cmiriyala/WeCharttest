@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Validator;
 use App\User;
 use App\security_question_users;
 use Monolog\Logger;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
@@ -77,9 +76,6 @@ class ResetPasswordController extends Controller
                 $security_answer = strtolower($request->security_answer3);
                 $security_answer_fetched = $security_question_user3->security_question_answer;
             }
-
-            Log::info(security_answer_fetched);
-            Log::info(security_answer);
 
 
             if ($security_answer == $security_answer_fetched)
