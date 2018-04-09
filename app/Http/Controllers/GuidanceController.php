@@ -55,7 +55,7 @@ public function post_ddx(Request $request)
                     $active_record['updated_by'] = $request['user_id'];
                     $active_record->save();
                 }
-                sleep(5);
+                sleep(1);
                 $output = "";
                 $diagnosis_list_ddx = active_record::leftjoin('active_record as act2', 'active_record.active_record_id', '=', 'act2.doc_control_group')
                     ->where('active_record.patient_id', '=', $request['patient_id'])
