@@ -124,6 +124,7 @@
         }
 
         $("#btn_save_ddx").click(function(){
+            $(this).prop("disabled",true);
             inputsChanged = false;
             $('textarea[name^="Textcom"]').each(function() {
                 $.ajax({
@@ -146,12 +147,14 @@
                     console.log(data);
                     $('#ddxbody').html(data);
                     $("#search_diagnosis_ddx").empty();
+                    $("#btn_save_ddx").prop("disabled",false);
                     swal("DDx data saved successfully!", {
                         icon: "success",
                         customClass: 'swal-wide',
                         buttons: false,
                         timer: 1000,
                     });
+
                 }
 
             });
