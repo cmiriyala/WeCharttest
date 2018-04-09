@@ -130,8 +130,8 @@
         <br>
         <br>
     </div>
+            @yield('content')
     </div>
-    @yield('content')
 
     <div>
     <img src="/logos/footer.png" alt="Footer" style="height:250px;width:100%;">
