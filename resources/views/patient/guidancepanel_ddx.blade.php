@@ -63,7 +63,7 @@
 </form>
 <div class="row">
     <div class="col-sm-6" style="padding-right: 25px">
-        <button type="submit" id="btn_save_ddx" class="btn btn-primary"  style="float: right">
+        <button type="submit" id="btn_save_ddx" class="btn btn-primary" onclick="setTimeout(myFunction, 3000)" style="float: right">
             <i class="fa fa-floppy-o" aria-hidden="true"></i> Save DDx
         </button>
     </div>
@@ -123,7 +123,7 @@
             }
         }
 
-        $("#btn_save_ddx").click(function(){
+        setTimeout($("#btn_save_ddx").click(function(){
             inputsChanged = false;
             $('textarea[name^="Textcom"]').each(function() {
                 $.ajax({
@@ -156,7 +156,7 @@
             });
 
 
-        });
+        }) ,1000);
         window.onbeforeunload = unloadPage;
     });
 </script>
