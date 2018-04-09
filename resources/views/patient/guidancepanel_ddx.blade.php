@@ -123,7 +123,7 @@
             }
         }
 
-        setTimeout($("#btn_save_ddx").click(function(){
+        $("#btn_save_ddx").click(function(){
             inputsChanged = false;
             $('textarea[name^="Textcom"]').each(function() {
                 $.ajax({
@@ -143,6 +143,7 @@
                 url: '{{route('post_ddx')}}',
                 data: $('#ddx_form').serialize(),
                 success: function (data) {
+                    console.log(data);
                     $('#ddxbody').html(data);
                     $("#search_diagnosis_ddx").empty();
                     swal("DDx data saved successfully!", {
@@ -156,7 +157,7 @@
             });
 
 
-        }) ,1000);
+        });
         window.onbeforeunload = unloadPage;
     });
 </script>
