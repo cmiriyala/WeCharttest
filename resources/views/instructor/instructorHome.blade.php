@@ -134,6 +134,7 @@
                             @endforeach
                         @else
                             <p>{{$for_review_message}}</p>
+                            <br>
                         @endif
                     </div>
                 </div>
@@ -212,8 +213,6 @@
                 </div>
             </div>
         </div>
-        <br>
-        <br>
         <br>
         <br>
         <br>
