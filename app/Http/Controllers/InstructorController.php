@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
 use Carbon;
-
+use App\Notifications\FeedbackNotification;
 class InstructorController extends Controller
 {
     public function index()

@@ -17,6 +17,7 @@ use App\patient;
 use App\active_record;
 use Illuminate\Support\Facades\DB;
 use Carbon;
+use App\Notifications\FeedbackNotification;
 
 class DocumentationController extends Controller
 {
