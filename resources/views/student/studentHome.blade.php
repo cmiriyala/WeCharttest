@@ -54,7 +54,7 @@
 
     <div class="container">
         <div class="row">
-            <h3 style="text-align: center"><img src="logos\LogoStudent.png" width="4%"> <b>Student Dashboard <img src="logos\LogoStudent.png" width="4%"></b></h3>
+            <h3 style="text-align: center"> <b>Student Dashboard </b></h3>
         </div>
         <!-- This button will take the user to a new page where new patient's demographic will be entered -->
         <div class="row">

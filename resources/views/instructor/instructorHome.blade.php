@@ -53,7 +53,7 @@
 
     <div class="container">
         <div class="row">
-            <h3 style="text-align: center"><img src="logos\LogoInstructor.png" width="4%"> Instructor Dashboard <img src="logos\LogoInstructor.png" width="4%"></h3>
+            <h3 style="text-align: center"> Instructor Dashboard </h3>
         </div>
         <div class="row">
             <div class="col-md-2 col-md-offset-1">
