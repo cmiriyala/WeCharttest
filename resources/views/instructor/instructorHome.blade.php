@@ -134,9 +134,6 @@
                             @endforeach
                         @else
                             <p>{{$for_review_message}}</p>
-                            <br>
-                            <br>
-                            <br>
                         @endif
                     </div>
                 </div>
@@ -208,7 +205,6 @@
                                     </div>
                                     </div>
                                 @endforeach
-
                             @else
                                 <p>{{$reviewed_message}}</p>
                             @endif
@@ -216,12 +212,13 @@
                 </div>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <script type="text/javascript">
 
         jQuery(document).ready(function($)
