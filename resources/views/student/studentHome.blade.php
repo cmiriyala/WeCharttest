@@ -137,6 +137,7 @@
                             @endforeach
                         @else
                             <p>{{$saved_message}}</p>
+                            <br>
                         @endif
                     </div>
                 </div>
@@ -206,6 +207,7 @@
 
                         @else
                             <p>{{$submitted_message}}</p>
+                            <br>
                         @endif
                     </div>
                 </div>

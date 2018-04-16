@@ -206,7 +206,7 @@
 
 <nav class="navbar navbar-inverse navbar-static-top" id="navigation_bar"></nav>
 
-<img src="/logos/footer.png" alt="Footer" style="width: 100%; height: 30%;margin-top: 14.3%">
+<img src="/logos/footer.png" alt="Footer" style="width: 100%; height: 30%;margin-top: 14.5%">
 <img src="/logos/unmc.png" alt="UNMC logo" style="width: 5%; height: 8%; left: 51%; top: 96%;">
 
 

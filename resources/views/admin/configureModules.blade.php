@@ -137,6 +137,7 @@
                             </td>
                         </tr>
                     @endforeach
+                    <br>
                 @endif
                 </tbody>
             </table>

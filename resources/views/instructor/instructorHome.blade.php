@@ -133,11 +133,10 @@
                                 </div>
                             @endforeach
                         @else
-                            <br>
-                            <br>
-
-                            <br>
                             <p>{{$for_review_message}}</p>
+                            <br>
+                            <br>
+                            <br>
                         @endif
                     </div>
                 </div>
@@ -152,10 +151,6 @@
                     </div>
                     <div class="panel-body" style="margin-bottom: 0;padding-bottom: 0">
                             @if(!empty($reviewed_patients))
-                            <br>
-                            <br>
-                            <br>
-                            <br>
                                 <?php $modid = 0; ?>
                                 @foreach($modules_reviewed as $module)
                                     <?php $modid = $modid + 1; ?>
@@ -222,6 +217,10 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <script type="text/javascript">
 
