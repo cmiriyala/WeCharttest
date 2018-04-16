@@ -181,7 +181,7 @@
                             <li class="dropdown">
 
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <span class="fa fa-bell" style="color:black;position: relative;font-size: 1.2em;">
+                                <span class="fa fa-bell" style="color:white;position: relative;font-size: 1.2em;">
                                 </span>
                                     @if(count(auth()->user()->unreadNotifications))
                                         <span class="badge" style="position: absolute; top: 4px;right: 4px;font-size: 1.0em;">
@@ -191,11 +191,11 @@
                                 <ul class="dropdown-menu" role="menu">
 
                                     <li>
-                                        <a href="{{route('markRead')}}" style="color: blue;">Mark all as Read</a>
+                                        <a href="{{route('markallRead')}}" style="color: blue;">Mark all as read</a>
                                     </li>
                                     @foreach(auth()->user()->unreadNotifications as $notification)
                                         <li>
-                                            <a href="" style="background-color: yellow">@include('layouts.partials.notification.'.snake_case(class_basename($notification->type)))</a>
+                                            <a href="" style="background-color: lightgoldenrodyellow">@include('layouts.partials.notification.'.snake_case(class_basename($notification->type)))</a>
                                         </li>
                                     @endforeach
                                     @foreach(auth()->user()->readNotifications as $notification)

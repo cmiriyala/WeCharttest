@@ -18,7 +18,7 @@
     <div class="form-group">
         <div class="row ">
             <div class="col-md-5  pull-right">
-                <button id="mybutton" class="btn btn-info" ><span class="glyphicon glyphicon-off"></span> Clear All</button>
+                <button id="mybutton" class="btn btn-info" ><span class="glyphicon glyphicon-remove"style="font-size:15px"></span> Clear All</button>
             </div>
         </div>
         <div class="row">
@@ -36,7 +36,7 @@
                     <option value="1"></option>
                 </select>
             </div>
-            <div class="col-sm-3"><a id="closeaudio" ><span class="glyphicon glyphicon-remove"></span></a></div>
+            <div class="col-sm-3"><a id="closeaudio" ><span class="glyphicon glyphicon-remove" style="font-size:18px"></span></a></div>
         </div>
         <br>
         <div class="row">
@@ -60,7 +60,7 @@
                     <option value="1"></option>
                 </select>
             </div>
-            <div class="col-sm-3"><a id="closevideo" ><span class="glyphicon glyphicon-remove"></span></a></div>
+            <div class="col-sm-3"><a id="closevideo" ><span class="glyphicon glyphicon-remove" style="font-size:18px"></span></a></div>
 
         </div>
         <br>
@@ -86,7 +86,7 @@
                     <option value="1"></option>
                 </select>
             </div>
-            <div class="col-sm-3"><a id="closepictures" ><span class="glyphicon glyphicon-remove"></span></a></div>
+            <div class="col-sm-3"><a id="closepictures" ><span class="glyphicon glyphicon-remove" style="font-size:18px"></span></a></div>
         </div>
         <br>
         <div class="row">
@@ -100,7 +100,13 @@
 </div>
 
 <script type="text/javascript">
+    $(document).ready(function () {
+        $('#closeaudio').hide();
+        $('#closevideo').hide();
+        $('#closepictures').hide();
+    })
     function Checkfunc(val){
+        $('#closevideo').show();
         if(val=='')
         {
             return 'false';
@@ -130,6 +136,7 @@
         width:'100%'
     });
     function Checkaudio(val){
+        $('#closeaudio').show();
         if(val=='')
         {
             return 'false';
@@ -160,6 +167,7 @@
     });
     function CheckPicture(val)
     {
+        $('#closepictures').show();
         if(val=='')
         {
             return 'false';
@@ -188,6 +196,7 @@
     $('#closepictures').click(function () {
         $('#searchpic').val('1').change();
         $('#mypicture').hide();
+        $('#closepictures').hide();
         clearPic();
     });
     function clearPic()
@@ -214,6 +223,7 @@
     $('#closevideo').click(function () {
         $('#search').val('1').change();
         $('#myvideo').hide();
+        $('#closevideo').hide();
         clearVid();
     });
     function clearVid()
@@ -238,6 +248,7 @@
     $('#closeaudio').click(function () {
         $('#searchaudio').val('1').change();
         $('#myaudio').hide();
+        $('#closeaudio').hide();
         clearAuid();
     });
     function clearAuid(){

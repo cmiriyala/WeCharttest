@@ -136,7 +136,6 @@
                             <th><i aria-hidden="true"></i> Type</th>
                             <th><i aria-hidden="true"></i> Link</th>
                             <th style="border-right: hidden"><i aria-hidden="true"></i> Actions </th>
-                            <th style="border-left: hidden"><i aria-hidden="true"></i> </th>
                         </tr>
                         </thead>
                         <?php $rownum=0; ?>
@@ -152,8 +151,6 @@
                                 <td>
                                     <button class="editButton btn btn-info" id="<?php echo $rownum ?>"><i class="fa fa-edit" aria-hidden="true"></i></button>
                                     <button class="saveButton btn btn-success" id="<?php echo $rownum ?>" value="{{$mediarow->media_lookup_value_id}}"><i class="fa fa-save" aria-hidden="true"></i></button>
-                                </td>
-                                <td>
                                     <a href="{{ route('delete_media', ['id' => $mediarow->media_lookup_value_id]) }}" class="btn btn-danger enable" id="delete" onclick="return Delete()">
                                         <i class="fa fa-trash-o" aria-hidden="true"></i>
                                     </a>
@@ -176,17 +173,15 @@
             $('#media_table').DataTable({
                 "pagingType": "full_numbers",
                 "paging": true,
-                "lengthChange": false,
-                "lengthMenu": [6],
+                "lengthMenu": [10,25,50,100],
                 "columns": [
                     null,
                     null,
                     { "searchable": false },
-                    { "searchable": false },
                     { "searchable": false }
                 ],
                 "columnDefs": [
-                    { orderable: false, targets: 4 }
+                    { orderable: false, targets: 3 }
                 ],
                 "dom": 'l<"toolbar">frtip',
                 "createdRow": function( row, data, dataIndex ) {
@@ -286,7 +281,7 @@
 
             });
 
-            $("div.toolbar").html('<button id="clearsearch" autocomplete="off" class="close" type="button"><i class="fa fa-close" style="font-size:22px;color:#DD0000"></i></button>');
+            $("div.toolbar").html('<button id="clearsearch" autocomplete="off" class="close" type="button"><i class="fa fa-close" style="font-size: 18px;padding-top: 8px; color: red;"></i></button>');
             var medtable = $('#media_table').DataTable();
             $("#clearsearch").click(function(event){
                 medtable.search('').draw();

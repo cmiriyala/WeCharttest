@@ -212,11 +212,17 @@ Route::get('/account_deleted', function () {
     return view('errors/account_deleted');
 });
 
-Route::get('markAsRead',function() {
+Route::get('markAsRead/{id}',function($id) {
+
+    auth()->user()->unreadNotifications->where('id',$id)->markAsRead();
+
+    return redirect()->back();
+})->name('markRead');
+Route::get('markallAsRead',function() {
 
     auth()->user()->unreadNotifications->markAsRead();
 
     return redirect()->back();
-})->name('markRead');
+})->name('markallRead');
 
 
