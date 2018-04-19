@@ -93,9 +93,10 @@ class InstructorController extends Controller
             $patient = patient::where('patient_id',$request['patient_id'])->first();
             $patientfname = $patient->first_name;
             $patientlname = $patient->last_name;
+            $patientid = $request['patient_id'];
 
 
-            $user->notify(new FeedbackNotification($insfname,$inslname,$patientfname,$patientlname));
+            $user->notify(new FeedbackNotification($insfname,$inslname,$patientid,$patientfname,$patientlname));
 
             DB::table( 'users_patient' )->where( 'patient_id', $request['patient_id'] )->where( 'user_id', $request['user_id'] )->update( ['patient_record_status_id' => '3', 'updated_by' => $request['user_id'], 'updated_at' => Carbon\Carbon::now( 'CDT' )] );
 

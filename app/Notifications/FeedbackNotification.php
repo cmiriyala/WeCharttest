@@ -16,10 +16,11 @@ class FeedbackNotification extends Notification
      *
      * @return void
      */
-    public function __construct($insfname,$inslname,$patientfname,$patientlname)
+    public function __construct($insfname,$inslname,$patientid,$patientfname,$patientlname)
     {
       $this->insfname = $insfname;
         $this->inslname = $inslname;
+        $this->patientid = $patientid;
         $this->patientfname = $patientfname;
         $this->patientlname = $patientlname;
     }
@@ -46,6 +47,7 @@ class FeedbackNotification extends Notification
         return [
             'insfname'=>$this->insfname,
             'inslname'=>$this->inslname,
+            'patientid' => $this->patientid,
             'patientfname'=>$this->patientfname,
             'patientlname'=>$this->patientlname,
         ];

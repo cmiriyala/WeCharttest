@@ -67,8 +67,10 @@ Route::group(['middleware' => 'can:configure-modules'], function() {
 Route::get('/StudentHome', 'StudentController@index')->name('student.home');
 Route::get('/PatientView/{patient_id}', 'StudentController@view_patient')->name('patient.view');
 Route::get('/StudentPreview/{patient_id}', 'NavigationController@get_studentpreview')->name('student_preview');
+Route::get('/Studentpreview/{notification_id}', 'NavigationController@get_studentnotificationpreview')->name('student_notification_preview');
 Route::post('post_feedback', 'InstructorController@post_feedback')->name('post_feedback');
 Route::get('/PatientPreview/{patient_id}', 'NavigationController@get_preview')->name('patient_preview');
+Route::get('/Patientpreview/{notification_id}', 'NavigationController@get_notification_preview')->name('patient_notification_preview');
 Route::get('/PatientDelete/{id}', 'StudentController@destroy')->name('patient.destroy');
 
 //Patient routes

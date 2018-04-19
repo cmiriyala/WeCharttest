@@ -133,8 +133,11 @@
                                 </div>
                             @endforeach
                         @else
-                            <p>{{$for_review_message}}</p>
                             <br>
+                            <br>
+                            <p>There are no patients for review.</p>
+                            <br>
+                            <p>{{$for_review_message}}</p>
                         @endif
                     </div>
                 </div>
@@ -207,6 +210,7 @@
                                     </div>
                                 @endforeach
                             @else
+                            <p>There are no reviewed patients</p>
                                 <p>{{$reviewed_message}}</p>
                             @endif
                     </div>

@@ -206,7 +206,7 @@
 
 <nav class="navbar navbar-inverse navbar-static-top" id="navigation_bar"></nav>
 
-<img src="/logos/footer.png" alt="Footer" style="width: 100%; height: 30%;margin-top: 14.3%">
+<img src="/logos/footer.png" alt="Footer" style="width: 100%; height: 30%;margin-top: 15.3%">
 <img src="/logos/unmc.png" alt="UNMC logo" style="width: 5%; height: 8%; left: 51%; top: 96%;">
 
 
@@ -262,7 +262,7 @@
         </script>
 
         @else
-            <div class="col-md-1 col-md-offset-5" style="margin-left:33%;margin-top:65%;position: absolute">
+            <div class="col-md-1 col-md-offset-5" style="margin-left:33%;margin-top:85%;position: absolute">
                 <a href="#aboutus" class="window">About WeChart</a><br>
                 <div id="aboutus" class="popup">
                     <p style="text-align: center; font-size: 120%">About WeChart</p>
@@ -276,7 +276,7 @@
                 </div>
             </div>
             </div>
-            <div class="col-md-1 col-md-offset-5" style="margin-left:108%;margin-top:65%;position: absolute">
+            <div class="col-md-1 col-md-offset-5" style="margin-left:108%;margin-top:85%;position: absolute">
                 <a href="#login-box" class="window">Contact Us</a><br>
                 <div id="login-box" class="popup2">
                     <p style="text-align: center; font-size: 120%">Contact Us</p>

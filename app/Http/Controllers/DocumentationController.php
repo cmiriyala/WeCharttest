@@ -2201,9 +2201,10 @@ else {
                     $patient = patient::where('patient_id',$request['patient_id'])->first();
                     $patientfname = $patient->first_name;
                     $patientlname = $patient->last_name;
+                    $patientid = $request['patient_id'];
 
 
-                    $user->notify(new FeedbackNotification($insfname,$inslname,$patientfname,$patientlname));
+                    $user->notify(new FeedbackNotification($insfname,$inslname,$patientid,$patientfname,$patientlname));
                 }
                 patient::where('patient_id', $request['patient_id'])->update(array('completed_flag' => true));
                 patient::where('patient_id', $request['patient_id'])->update(array('submitted_date' => Carbon\Carbon::now('CDT')->format('m-d-Y')));
