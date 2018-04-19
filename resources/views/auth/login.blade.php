@@ -211,7 +211,7 @@
 
 
 <div class="loginBox">
-    <img src="/logos/login_panel.png" alt="LoginPanel" style="width: 1200px; height: 800px;margin-left: 10%; opacity:0.8" >
+    <img src="/logos/login_panel2.png" alt="LoginPanel" style="width: 1200px; height: 800px;margin-left: 10%; opacity:0.8" >
     <img src="/logos/Logo.png" style="width: 300px; height: 200px;margin-top: -90%">
     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
         {{ csrf_field() }}
