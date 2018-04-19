@@ -249,10 +249,10 @@
     </form>
     <div class="form-group">
         @if ($errors->has('email'))
-            <div class="col-md-1 col-md-offset-5" style="margin-left:5%;margin-top:10.6%;position: fixed">
+            <div class="col-md-1 col-md-offset-5" style="margin-left:5%;margin-top:36vh;position: fixed">
                 <a href="#login-box" class="login-window">About WeChart</a><br>
             </div>
-            <div class="col-md-1 col-md-offset-5" style="margin-left:18.5%;margin-top:10.6%;position: fixed">
+            <div class="col-md-1 col-md-offset-5" style="margin-left:18.5%;margin-top:36vh;position: fixed">
                 <a href="#">Contact us</a>
             </div>
         <script>
