@@ -89,12 +89,12 @@
       <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="278" column="71" lean-forward="false" selection-start-line="278" selection-start-column="71" selection-end-line="278" selection-end-column="71" />
+            <state relative-caret-position="196">
+              <caret line="264" column="70" lean-forward="false" selection-start-line="264" selection-start-column="70" selection-end-line="264" selection-end-column="70" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -685,12 +685,12 @@
       <workItem from="1523313524038" duration="10334000" />
       <workItem from="1523905633006" duration="16104000" />
       <workItem from="1523990497599" duration="8263000" />
-      <workItem from="1524095319057" duration="8144000" />
+      <workItem from="1524095319057" duration="8263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42845000" />
+    <option name="totallyTimeSpent" value="42964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1108,12 +1108,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="278" column="71" lean-forward="false" selection-start-line="278" selection-start-column="71" selection-end-line="278" selection-end-column="71" />
+        <state relative-caret-position="196">
+          <caret line="264" column="70" lean-forward="false" selection-start-line="264" selection-start-column="70" selection-end-line="264" selection-end-column="70" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
