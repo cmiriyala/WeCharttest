@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7801dfde-ab39-482e-a6ba-e1576d9b5c3e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/instructor/instructorHome.blade.php" afterPath="$PROJECT_DIR$/resources/views/instructor/instructorHome.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -90,12 +89,13 @@
       <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="278" column="87" lean-forward="false" selection-start-line="278" selection-start-column="87" selection-end-line="278" selection-end-column="87" />
+            <state relative-caret-position="763">
+              <caret line="291" column="30" lean-forward="false" selection-start-line="291" selection-start-column="30" selection-end-line="291" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -686,12 +686,12 @@
       <workItem from="1523313524038" duration="10334000" />
       <workItem from="1523905633006" duration="16104000" />
       <workItem from="1523990497599" duration="8263000" />
-      <workItem from="1524095319057" duration="6938000" />
+      <workItem from="1524095319057" duration="7137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41639000" />
+    <option name="totallyTimeSpent" value="41838000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1109,12 +1109,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="278" column="87" lean-forward="false" selection-start-line="278" selection-start-column="87" selection-end-line="278" selection-end-column="87" />
+        <state relative-caret-position="763">
+          <caret line="291" column="30" lean-forward="false" selection-start-line="291" selection-start-column="30" selection-end-line="291" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
