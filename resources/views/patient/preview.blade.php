@@ -29,7 +29,7 @@
             font-size: 12px;
             border: none;
             outline: none;
-            background-color: #5DADE2;
+            background: linear-gradient(#04A2C9,#075DBF);
             color: white;
             cursor: pointer;
             padding: 15px;
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </div>
-        <div class="panel-body" style="margin-bottom: 0;padding-bottom: 0;background-color: #FFFAF0;margin-top: 0;padding-top: 0">
+        <div class="panel-body" style="margin-bottom: 0;padding-bottom: 0;background: linear-gradient(#FFE8C3, #f7f5be);margin-top: 0;padding-top: 0">
             <table class="table" style=" margin-top: 0;padding-top: 0;margin-bottom: 0;padding-bottom: 0">
                 <!--This is the first row in the vital signs panel -->
                 <tr style="padding-top: 0;padding-bottom: 0%; border-style: hidden">
@@ -176,8 +176,8 @@
     {{--HPI--}}
     <div class="row">
         <div class="panel panel-default">
-        <div class="panel-heading" style="background-color: lightblue">
-            <a data-toggle="collapse" href="#HPI">HPI</a>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf)">
+                <a data-toggle="collapse" href="#HPI" class="text-secondary">HPI</a>
         </div>
         <div class="panel-body" id="HPI" class="panel-collapse collapse in ">
             @if(count($HPI)>0)
@@ -189,14 +189,14 @@
     {{--Medical History--}}
     <div class="row">
         <div class="panel panel-default">
-        <div class="panel-heading" style="background-color: lightblue">
-            <a data-toggle="collapse" href="#medical_history">Medical History</a>
-        </div>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf)">
+                <a data-toggle="collapse" href="#medical_history" class="text-secondary">Medical History</a>
+            </div>
         <div class="panel-body" id="medical_history" class="panel-collapse collapse in ">
             {{--Personal History--}}
             <table class="table table-striped table-bordered table-hover">
                 <thead>
-                <tr class="bg-info">
+                <tr class="bg-warning">
                     <th colspan="2">Personal History</th>
                 </tr>
                 </thead>
@@ -221,7 +221,7 @@
             {{--Family History--}}
             <table class="table table-striped table-bordered table-hover">
                 <thead>
-                    <tr class="bg-info">
+                    <tr class="bg-warning">
                         <th colspan="6">Family History</th>
                     </tr>
                     <tr>
@@ -268,7 +268,7 @@
             {{--Surgical History --}}
             <table class="table table-striped table-bordered table-hover">
                 <thead>
-                <tr class="bg-info">
+                <tr class="bg-warning">
                     <th colspan="2">Surgical History</th>
                 </tr>
                 </thead>
@@ -292,7 +292,7 @@
             {{--Social History--}}
             <table class="table table-striped table-bordered table-hover">
                 <thead>
-                <tr class="bg-info">
+                <tr class="bg-warning">
                     <th colspan="8">Social History</th>
                 </tr>
                 </thead>
@@ -345,9 +345,9 @@
     {{--Medications--}}
     <div class="row">
         <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue">
-                        <a data-toggle="collapse" href="#medications">Medications</a>
-                </div>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf)">
+                <a data-toggle="collapse" href="#medications" class="text-secondary">Medications</a>
+            </div>
                 <div class="panel-body" id="medications" class="panel-collapse collapse in">
                 <p>
                         <strong>List of Medicines (Medicine-Dosage): </strong><br>
@@ -373,11 +373,11 @@
         <table class="table table-striped table-bordered table-hover" id="vital_signs_table">
         <thead>
         <tr>
-            <th style="background-color: lightblue" colspan="12">
+            <th style="background: linear-gradient(#af9999,#b3b8bf)" colspan="12">
                 <a data-toggle="collapse" href="#vital_signs">Vital Signs</a>
             </th>
         </tr>
-        <tr class="bg-info">
+        <tr class="bg-warning">
             <th>Timestamp</th>
             <th>BP Systolic</th>
             <th>BP Diastolic</th>
@@ -466,13 +466,13 @@
     {{--ROS--}}
     <div class="row">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: lightblue">
-                <a data-toggle="collapse" href="#ros">ROS</a>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf)">
+                <a data-toggle="collapse" href="#ros" class="text-secondary">ROS</a>
             </div>
             <div class="panel-body" id="ros" class="panel-collapse collapse in">
                 {{--ros_constitutional--}}
                 <div class="panel panel-default" id="constitutional">
-                        <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                             <p style="margin-top: 0">ROS- Constitutional</p>
                         </div>
                         <div class="panel-body" style="padding-bottom: 0">
@@ -496,7 +496,7 @@
                 </div>
                 {{--ros_hent--}}
                 <div class="panel panel-default" id="hent">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">ROS- HENT</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -518,7 +518,7 @@
                 </div>
                 {{--ros_eyes--}}
                 <div class="panel panel-default" id="eyes">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">ROS- Eyes</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -540,7 +540,7 @@
                 </div>
                 {{--ros_respiratory--}}
                 <div class="panel panel-default" id="respiratory">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">ROS- Respiratory</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -562,7 +562,7 @@
                 </div>
                 {{--ros_cardiovascular--}}
                 <div class="panel panel-default" id="cardiovascular">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">ROS- Cardiovascular</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -584,7 +584,7 @@
                 </div>
                 {{--ros_gastrointestinal--}}
                 <div class="panel panel-default" id="gastrointestinal">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">ROS- Gastrointestinal</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -606,7 +606,7 @@
                 </div>
                 {{--ros_musculosketal--}}
                 <div class="panel panel-default" id="musculoskeletal">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">ROS- Musculoskeletal </p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -628,7 +628,7 @@
                 </div>
                 {{--ros_integumentary--}}
                 <div class="panel panel-default" id="integumentary">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">ROS- Integumentary</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -650,7 +650,7 @@
                 </div>
                 {{--ros_neurological--}}
                 <div class="panel panel-default" id="eyes">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">ROS- Neurological</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -672,7 +672,7 @@
                 </div>
                 {{--ros_psychological--}}
                 <div class="panel panel-default" id="psychological">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">ROS- Psychological</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -698,13 +698,13 @@
     {{--PE--}}
     <div class="row">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: lightblue">
-                <a data-toggle="collapse" href="#pe">PE</a>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf)">
+                <a data-toggle="collapse" href="#pe" class="text-secondary">PE</a>
             </div>
             <div class="panel-body" id="pe" class="panel-collapse collapse in">
                 {{--PE_constitutional--}}
                 <div class="panel panel-default" id="pe_constitutional">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">PE- Constitutional</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -728,7 +728,7 @@
                 </div>
                 {{--pe_hent--}}
                 <div class="panel panel-default" id="pe_hent">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">PE- HENT</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -750,7 +750,7 @@
                 </div>
                 {{--pe_eyes--}}
                 <div class="panel panel-default" id="pe_eyes">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">PE- Eyes</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -772,7 +772,7 @@
                 </div>
                 {{--pe_respiratory--}}
                 <div class="panel panel-default" id="pe_respiratory">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">PE- Respiratory</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -794,7 +794,7 @@
                 </div>
                 {{--cardiovascular--}}
                 <div class="panel panel-default" id="pe_cardiovascular">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">PE- Cardiovascular</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -816,7 +816,7 @@
                 </div>
                 {{--gastrointestinal--}}
                 <div class="panel panel-default" id="pe_gastrointestinal">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">PE- Gastrointestinal</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -838,7 +838,7 @@
                 </div>
                 {{--musculosketal--}}
                 <div class="panel panel-default" id="pe_musculoskeletal">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">PE- Musculoskeletal </p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -860,7 +860,7 @@
                 </div>
                 {{--integumentary--}}
                 <div class="panel panel-default" id="pe_integumentary">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">PE- Integumentary</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -882,7 +882,7 @@
                 </div>
                 {{--neurological--}}
                 <div class="panel panel-default" id="pe_eyes">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">PE- Neurological</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -904,7 +904,7 @@
                 </div>
                 {{--psychological--}}
                 <div class="panel panel-default" id="pe_psychological">
-                    <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+                    <div class="panel-heading" style="background-color: #fffadd;padding-bottom: 0">
                         <p style="margin-top: 0">PE- Psychological</p>
                     </div>
                     <div class="panel-body" style="padding-bottom: 0">
@@ -930,8 +930,8 @@
     {{--Orders--}}
     <div class="row">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: lightblue">
-                <a data-toggle="collapse" href="#orders">Orders</a>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf)">
+                <a data-toggle="collapse" href="#orders" class="text-secondary">Orders</a>
             </div>
             <div class="panel-body" id="orders" class="panel-collapse collapse in">
                 <p>
@@ -974,8 +974,8 @@
     {{--Results--}}
     <div class="row">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                <a data-toggle="collapse" href="#results">Results</a>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                <a data-toggle="collapse" href="#results" class="text-secondary">Results</a>
             </div>
             <div class="panel-body" id="results" class="panel-collapse collapse in">
                 <p>
@@ -1017,7 +1017,7 @@
     {{--MDM/Plan--}}
     <div class="row">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
                 <a data-toggle="collapse" href="#mdm">MDM/Plan</a>
             </div>
             <div class="panel-body " id="mdm" class="panel-collapse collapse in">
@@ -1030,8 +1030,8 @@
     {{--Disposition--}}
     <div class="row">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                <a data-toggle="collapse" href="#disposition">Disposition</a>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                <a data-toggle="collapse" href="#disposition" class="text-secondary">Disposition</a>
             </div>
             <div class="panel-body " id="disposition" class="panel-collapse collapse in">
                 <p><strong>List of Diagnosis: </strong><br>
@@ -1056,13 +1056,13 @@
     {{--DDx--}}
     <div class="row">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                <a data-toggle="collapse" href="#ddx">DDx</a>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                <a data-toggle="collapse" href="#ddx" class="text-secondary">DDx</a>
             </div>
             <div class="panel-body " id="ddx" class="panel-collapse collapse in">
             <table class="table table-striped table-bordered table-hover" id="ddx">
                 <thead>
-                <tr class="bg-info">
+                <tr class="bg-warning">
                     <th>List of Diagnosis</th>
                     <th>Comments</th>
                 </tr>
@@ -1086,8 +1086,8 @@
     {{--Feedback--}}
     <div class="row">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                <a data-toggle="collapse" href="#feedback">Feedback</a>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                <a data-toggle="collapse" href="#feedback" class="text-secondary">Feedback</a>
             </div>
             <div class="panel-body " id="feedback" class="panel-collapse collapse in">
                 <div class="col-md-9">

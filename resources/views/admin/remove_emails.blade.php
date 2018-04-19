@@ -26,7 +26,7 @@
     <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color: grey; padding-bottom: 0">
+                    <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf); padding-bottom: 0">
                         <h4 style="margin-top: 0">All Unregistered Student Emails</h4>
                     </div>
 
@@ -34,7 +34,7 @@
                         @if(count($studentDetails)>0)
                             <table class="table table-striped table-bordered table-hover">
                             <thead>
-                            <tr class="bg-info">
+                            <tr class="bg-warning">
                                 <th >Email Address</th>
                                 <th >Role</th>
                                 <th >Creation Date</th>
@@ -74,7 +74,7 @@
     <div class="row">
          <div class="col-md-10 col-md-offset-1">
              <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: grey; padding-bottom: 0">
+                 <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf); padding-bottom: 0">
                     <h4 style="margin-top: 0">All Unregistered Instructor Emails</h4>
                 </div>
                 <div class="panel-body" style="height: 210px; overflow-y: scroll">

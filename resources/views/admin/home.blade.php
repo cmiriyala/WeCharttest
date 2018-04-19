@@ -19,7 +19,7 @@
                     <i class="fa fa-envelope-o" aria-hidden="true"></i> Remove Emails</a>
             </div>
             <div class="col-md-8 " style=" text-align:right">
-                <a class="btn btn-success" href={{url('/ConfigureModules')}}>
+                <a class="btn btn-primary" href={{url('/ConfigureModules')}}>
                     <i class="fa fa-cog" aria-hidden="true"></i> Configure Modules</a>
                 <a class="btn btn-success" href={{url('/AddMedia')}}>Manage Media</a>
             </div>
@@ -29,14 +29,14 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color: grey; padding-bottom: 0">
+                    <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf); padding-bottom: 0">
                         <h4 style="margin-top: 0">Students</h4>
                     </div>
 
                     <div class="panel-body">
                         <table class="table table-striped table-bordered table-hover">
                             <thead>
-                            <tr class="bg-info">
+                            <tr class="bg-warning">
                                 <th>Name</th>
                                 <th><i class="fa fa-envelope-o" aria-hidden="true"></i> Email Address</th>
                                 <th><i class="fa fa-phone" aria-hidden="true"></i> Contact Number</th>
@@ -81,14 +81,14 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color: grey; padding-bottom: 0">
+                    <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf); padding-bottom: 0">
                         <h4 style="margin-top: 0">Instructors</h4>
                     </div>
 
                     <div class="panel-body">
                         <table class="table table-striped table-bordered table-hover">
                             <thead>
-                            <tr class="bg-info">
+                            <tr class="bg-warning">
                                 <th>Name</th>
                                 <th><i class="fa fa-envelope-o" aria-hidden="true"></i> Email Address</th>
                                 <th><i class="fa fa-phone" aria-hidden="true"></i> Contact Number</th>
@@ -104,7 +104,7 @@
                                             &nbsp;<?php echo($instructor->lastname); ?></p></td>
                                     <td><p><?php echo($instructor->email); ?></p></td>
                                     <td><p><?php echo($instructor->contactno); ?></p></td>
-                                    <td><p><?php echo($instructor->departmentName); ?></p></td>
+                                    <td><p><?php echo($instructor->department_name); ?></p></td>
                                     <td>
                                         {!! Form::open(['method' => 'DELETE', 'route' => ['archiveuser', $instructor->id],'id' => 'FormDeleteTime','class' =>'form-inline form-delete', 'onsubmit' => 'return ConfirmDelete()'])!!}
 

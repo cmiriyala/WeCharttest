@@ -26,6 +26,9 @@
         .navigation:hover{
             box-shadow: 2px 2px 50px 2px darkgray;
         }
+        .text-danger li:hover{
+            background-color: #AC1F2D;
+        }
 </style>
 
     {{--@parent--}}
@@ -46,7 +49,7 @@
                         {{--Adding Demographics to existing nav modules--}}
                         <a
                                 id="Demographics_tab"
-                                href="{{ URL::route('Demographics', $patient->patient_id)}}"
+                                href="{{ URL::route('Demographics', $patient->patient_id)}}" class="text-secondary"
                         >
                             <b>Demographics</b>
                         </a>
@@ -55,13 +58,13 @@
                     @foreach ($navs as $key=>$nav)
                         @if($nav[0]->parent_id === NULL)
                             <li class="list-group-item">
-                                <a id="{{$nav[0]->navigation_name}}_tab" href="{{ URL::route($nav[0]->navigation_name, $patient->patient_id)}}">
+                                <a id="{{$nav[0]->navigation_name}}_tab" href="{{ URL::route($nav[0]->navigation_name, $patient->patient_id)}}" class="text-secondary">
                                     <b>{{ $nav[0]->navigation_name }}</b>
                                 </a>
                             </li>
                         @else
                             <li class="list-group-item" style="padding-left: 20%">
-                                <a id="{{$nav[0]->navigation_name}}_tab" href="{{ URL::route($nav[0]->navigation_name.$nav[0]->parent_id, $patient->patient_id)}}">
+                                <a id="{{$nav[0]->navigation_name}}_tab" href="{{ URL::route($nav[0]->navigation_name.$nav[0]->parent_id, $patient->patient_id)}}" class="text-secondary">
                                     <b>{{ $nav[0]->navigation_name }}</b>
                                 </a>
                             </li>
@@ -95,15 +98,12 @@
                 <div class="ScrollStyle" style="overflow:auto;height:100vh">
 
                 <!-- Guidance Panel -->
-                <div style="background-color: lightpink; display: flex; border-radius: 5px;">
-                    <h4>&nbsp;Guidance Panel</h4>
-                </div>
                 <br>
                 <div class="container-fluid" id="tabdiv">
                     <ul class="nav nav-pills" id="myTab">
-                        <li id="changetets"  class="active"><a data-toggle="pill" href="#main">Main</a></li>
-                        <li id="test"><a data-toggle="pill" href="#ddx">DDx</a></li>
-                        <li><a data-toggle="pill" href="#av">A/V</a></li>
+                        <li id="changetets"  class="active"><a data-toggle="pill" href="#main" class="text-danger">Main</a></li>
+                        <li id="test"><a data-toggle="pill" href="#ddx" class="text-danger">DDx</a></li>
+                        <li><a data-toggle="pill" href="#av" class="text-danger">A/V</a></li>
                     </ul>
 
                     <div class="tab-content">

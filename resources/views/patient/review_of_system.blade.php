@@ -64,9 +64,8 @@
         {{--ros_constitutional--}}
         <div class="col-md-6" id="constitutional">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-
-                    <h4 style="margin-top: 0">ROS- Constitutional</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">ROS- Constitutional</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -150,8 +149,8 @@
         
         <div class="col-md-6" id="hent">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">ROS- HENT</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">ROS- HENT</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -234,8 +233,9 @@
         
         <div class="col-md-6" id="eyes">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">ROS- Eyes</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">ROS- Eyes</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -319,8 +319,9 @@
         
         <div class="col-md-6" id="respiratory">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">ROS- Respiratory</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">ROS- Respiratory</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -405,8 +406,8 @@
         
         <div class="col-md-6" id="musculoskeletal">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">ROS- Musculoskeletal</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">ROS- Musculoskeletal</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -490,8 +491,8 @@
         
         <div class="col-md-6" id="integumentary">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">ROS- Integumentary</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">ROS- Integumentary</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -579,8 +580,9 @@
         
         <div class="col-md-6" id="neurological">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">ROS- Neurological</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">ROS- Neurological</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -664,8 +666,9 @@
         
         <div class="col-md-6" id="psychological">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">ROS- Psychological</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">ROS- Psychological</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -749,8 +752,9 @@
         {{--ros_gastrointestinal--}}
         <div class="col-md-6" id="gastrointestinal">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">ROS- Gastrointestinal</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">ROS- Gastrointestinal</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -833,8 +837,9 @@
         
         <div class="col-md-6" id="cardiovascular">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">ROS- Cardiovascular</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">ROS- Cardiovascular</h4>
                 </div>
                 <div class="panel-body">
                     <br>

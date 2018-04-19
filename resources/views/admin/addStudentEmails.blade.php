@@ -16,7 +16,7 @@
                 </div>
                 <br><br><br>
                 <div class="panel panel-default">
-                    <div class="panel-heading" style="backgroundd-color: lightblue">
+                    <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);font-weight:600">
                         <h4>Add Student Email Address</h4>
                     </div>
 

@@ -32,7 +32,8 @@ class AdminController extends Controller
                 ->where('archived','=','0')
                 ->get();
             $instructors = User::where('role','Instructor')
-                ->where('archived','=','0')
+                ->leftjoin('department', 'department.department_id', '=', 'users.department_id')
+                ->where('users.archived','=','0')
                 ->get();
             return view('admin/home', compact('students','instructors'));
     }

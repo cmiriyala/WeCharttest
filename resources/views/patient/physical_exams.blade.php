@@ -64,8 +64,9 @@
         {{--Eyes--}}
         <div class="col-md-6" id="eyes">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">Physical Exam- Eyes</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">Physical Exam- Eyes</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -147,8 +148,9 @@
         {{--Cardiovascular--}}
         <div class="col-md-6" id="cardiovascular">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">Physical Exam- Cardiovascular</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">Physical Exam- Cardiovascular</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -231,8 +233,9 @@
         {{--Integumentary--}}
         <div class="col-md-6" id="integumentary">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">Physical Exam- Integumentary</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">Physical Exam- Integumentary</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -314,8 +317,9 @@
         {{--Psychological--}}
         <div class="col-md-6" id="psychological">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">Physical Exam- Psychological</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">Physical Exam- Psychological</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -396,8 +400,9 @@
         {{--Respiratory--}}
         <div class="col-md-6" id="respiratory">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">Physical Exam- Respiratory</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">Physical Exam- Respiratory</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -479,8 +484,9 @@
         {{--Musculoskeletal--}}
         <div class="col-md-6" id="musculoskeletal">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">Physical Exam- Musculoskeletal</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">Physical Exam- Musculoskeletal</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -562,8 +568,9 @@
         {{--Neurological--}}
         <div class="col-md-6" id="neurological">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">Physical Exam- Neurological</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">Physical Exam- Neurological</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -645,8 +652,9 @@
         {{--Gastrointestinal--}}
         <div class="col-md-6"  id="gastrointestinal">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">Physical Exam- Gastrointestinal</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">Physical Exam- Gastrointestinal</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -727,8 +735,9 @@
         {{--HENT--}}
         <div class="col-md-6" id="hent">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">Physical Exam- HENT</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">Physical Exam- HENT</h4>
                 </div>
                 <div class="panel-body">
                     <br>
@@ -811,8 +820,9 @@
 
         <div class="col-md-6" id="constitutional">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">Physical Exam- Constitutional</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">Physical Exam- Constitutional</h4>
                 </div>
                 <div class="panel-body">
                     <br>

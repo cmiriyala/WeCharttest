@@ -14,7 +14,7 @@
         <div class="col-sm-12">
             <table class="table table-striped table-bordered table-hover">
                 <thead>
-                <tr class="bg-info">
+                <tr class="bg-gray">
                     <th>List of Ordered Medications</th>
                     <th colspan="20">Dosage</th>
                 </tr>
@@ -34,7 +34,7 @@
             <div class="col-sm-12">
                 <table class="table table-striped table-bordered table-hover">
                     <thead>
-                        <tr class="bg-info">
+                        <tr class="bg-gray">
                             <th>List of Ordered Labs</th>
                         </tr>
                     </thead>
@@ -52,7 +52,7 @@
             <div class="col-sm-12">
                 <table class="table table-striped table-bordered table-hover">
                     <thead>
-                        <tr class="bg-info">
+                        <tr class="bg-gray">
                             <th>List of Ordered Procedures</th>
                         </tr>
                     </thead>
@@ -70,7 +70,7 @@
             <div class="col-sm-12">
                 <table class="table table-striped table-bordered table-hover">
                     <thead>
-                        <tr class="bg-info">
+                        <tr class="bg-gray">
                             <th>List of Ordered Images</th>
                         </tr>
                     </thead>

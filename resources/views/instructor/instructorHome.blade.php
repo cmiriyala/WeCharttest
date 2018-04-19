@@ -21,7 +21,7 @@
     width: 100%;
     height: 35px;
     line-height: 35px;
-    background: #bdc3c7;
+        background: linear-gradient(#ffe4ba, #f4f2b2);
     text-align: center;
     color: #000000;
     font-weight: bold;
@@ -38,7 +38,7 @@
     border-bottom: 1px solid #7B7B78;
     border-right: 1px solid #7B7B78;
     color: #ffffff;
-    background: #bdc3c7;
+        background: linear-gradient(#ffe4ba, #f4f2b2);
     box-shadow: 1px 1px 2px #888888;
 }
 
@@ -68,7 +68,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default" style="margin-bottom: 0;padding-bottom: 0">
-                    <div class="panel-heading" style="background-color: #5DADE2; padding-bottom: 0">
+                    <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf); padding-bottom: 0">
                         <h4 style="margin-top: 0">Submitted For Review</h4>
                     </div>
                     <div class="panel-body" style="margin-bottom: 0;padding-bottom: 0">
@@ -88,7 +88,7 @@
                                         @if($for_review_patients)
                                             <table class="table table-striped table-bordered table-hover" style="float: left;">
                                                 <thead>
-                                                <tr class="bg-info">
+                                                <tr class="bg-custom">
                                                     <th>Patient Name</th>
                                                     <th>Visit Date</th>
                                                     <th>Submitted By</th>
@@ -146,7 +146,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default" style="margin-bottom: 0;padding-bottom: 0">
-                    <div class="panel-heading" style="background-color: #5DADE2; padding-bottom: 0">
+                    <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf); padding-bottom: 0">
                         <h4 style="margin-top: 0">Reviewed Patients</h4>
                     </div>
                     <div class="panel-body" style="margin-bottom: 0;padding-bottom: 0">
@@ -165,7 +165,7 @@
                                             @if($reviewed_patients)
                                                 <table class="table table-striped table-bordered table-hover" style="float: left;">
                                                     <thead>
-                                                    <tr class="bg-info">
+                                                    <tr class="bg-custom">
                                                         <th>Patient Name</th>
                                                         <th>Visit Date</th>
                                                         <th>Submitted By</th>

@@ -38,27 +38,27 @@
         <div class="row" style="overflow-x: scroll;width: 1200px">
             <table class="table-responsive table-striped" border="2" id="main_table">
                 <thead >
-                <tr>
-                    <td style="background-color:#5DADE2;">
+                <tr style="background: linear-gradient(#af9999,#b3b8bf)">
+                    <td>
                         <h5 style="width: 150px;margin-left: 1%;margin-right: 1%">
                             <h4 style="color: #000000">Module <i class="fa fa-arrows-v" aria-hidden="true"></i>/Navigations <i class="fa fa-arrows-h" aria-hidden="true"></i></h4>
                         </h5>
                     </td>
-                    <td style="background-color:#5DADE2;" align="middle">
+                    <td align="middle">
                         <h5 style="width: 150px;color: #000000"><b>Demographics</b></h5>
                     </td>
                     @foreach ($navs as $nav)
                         @if($nav->navigation_id == '2' || $nav->navigation_id == '9' || $nav->navigation_id == '20')
-                            <td  style="background-color:#5DADE2;color: #000000"  align="middle">
+                            <td align="middle">
                                 <h5 style="padding-left: 1%;padding-right: 1%;width: 100px"><b>{{ $nav->navigation_name }}</b></h5>
                             </td>
                         @else
                             @if($nav->parent_id != NULL)
-                                <td  style="background-color:#5DADE2; color: #000000; border: none">
+                                <td  style="color: #000000; border: none">
 
                                 </td>
                             @else
-                                <td  style="background-color:#5DADE2; color: #000000"  align="middle">
+                                <td  style="color: #000000"  align="middle">
                                     <h5 style="padding-left: 1%;padding-right: 1%;width: 100px"><b>{{ $nav->navigation_name }}</b></h5>
                                 </td>
                             @endif
@@ -68,21 +68,21 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="background-color:#5DADE2; color: #000000">
+                    <td style="color: #000000">
                     </td>
 
-                    <td style="background-color:#5DADE2; color: #000000" align="middle">
+                    <td style="color: #000000" align="middle">
                     </td>
 
                     @foreach ($navs as $nav)
                         @if($nav->parent_id != NULL)
-                            <td  style="background-color:#5DADE2; color: #000000"  align="middle">
+                            <td  style="color: #000000"  align="middle">
                                 <h5 style="padding-left: 1%;padding-right: 1%;width: 120px">
                                     <b>{{ $nav->navigation_name}}</b>
                                 </h5>
                             </td>
                         @else
-                            <td  style="background-color:#5DADE2; color: #000000"  align="middle">
+                            <td  style="color: #000000"  align="middle">
                                 <h5 style="padding-left: 1%;padding-right: 1%;width: 100px">
                                 </h5>
                             </td>

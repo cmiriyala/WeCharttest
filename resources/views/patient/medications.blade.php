@@ -6,8 +6,8 @@
     {{--Medications--}}
     <div class="container-fluid">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                <h4 style="margin-top: 0">Medications</h4>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                <h4 style="margin-top: 0;color:#000; font-weight:500">Medications</h4>
             </div>
             <div class="panel-body">
                 <form class="form-horizontal" method="POST" action="{{ route('post_medications') }}" id="medications_form">
@@ -20,7 +20,7 @@
                          <div class="row">
                             <table class="table table-striped table-bordered table-hover">
                                     <thead>
-                                    <tr class="bg-info">
+                                    <tr class="bg-warning">
                                         <th>List of Medicines</th>
                                         <th colspan="20">Dosage</th>
                                         <th>Action</th>

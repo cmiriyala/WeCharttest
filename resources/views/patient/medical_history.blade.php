@@ -64,8 +64,8 @@
         {{--Personal History--}}
         <div class="container-fluid">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">Personal History</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">Personal History</h4>
                 </div>
                     <div class="panel-body">
                         <form class="form-horizontal" method="POST" action="{{ route('personal_history') }}" id="personal_history_form">
@@ -79,7 +79,7 @@
                                 <div class="col-md-12 ">
                                     <table class="table table-striped table-bordered table-hover">
                                         <thead>
-                                        <tr class="bg-info">
+                                        <tr class="bg-warning">
                                             <th>List of Diagnosis</th>
                                             <th>Action</th>
                                         </tr>
@@ -149,8 +149,8 @@
         {{--Family History--}}
         <div class="container-fluid" id="family_history">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                <h4 style="margin-top: 0">Family History</h4>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                <h4 style="margin-top: 0;color:#000; font-weight:500">Family History</h4>
             </div>
             <div class="panel-body">
                 <form class="form-horizontal" method="POST" action="{{ route('family_history') }}" id="family_history_form">
@@ -162,7 +162,7 @@
                     <div class="row">
                         <table class="table table-striped table-bordered table-hover">
                             <thead>
-                            <tr class="bg-info">
+                            <tr class="bg-warning">
                                 <th>Relation</th>
                                 <th>Alive?</th>
                                 <th>List of Diagnosis</th>
@@ -272,8 +272,8 @@
         {{--Surgical History--}}
         <div class="container-fluid" id="surgical_history">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0">Surgical History</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500">Surgical History</h4>
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('surgical_history') }}" id="surgical_history_form">
@@ -287,7 +287,7 @@
                                 <div class="col-md-12 ">
                                     <table class="table table-striped table-bordered table-hover">
                                         <thead>
-                                        <tr class="bg-info">
+                                        <tr class="bg-warning">
                                             <th>List of Diagnosis</th>
                                             <th>Action</th>
                                         </tr>
@@ -357,8 +357,8 @@
         {{--Social History--}}
         <div class="container-fluid" id="social_history">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                <h4 style="margin-top: 0">Social History</h4>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                <h4 style="margin-top: 0;color:#000; font-weight:500">Social History</h4>
             </div>
             <div class="panel-body">
                 <form class="form-horizontal" method="POST" id="social_history_form" action="{{ route('social_history') }}">

@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightBlue">Reset Password</div>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf)">Reset Password</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -64,8 +64,8 @@
                 </div>
                 @else
                  <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color: lightBlue"> Reset Password- Please answer the below security questions.
-                    </div>
+                     <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf)"> Reset Password- Please answer the below security questions.
+                     </div>
                     <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">

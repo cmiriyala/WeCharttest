@@ -6,8 +6,9 @@
     {{--@parent--}}
     <div class="container-fluid">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                <h4 style="margin-top: 0">Orders</h4>
+            <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                <h4 style="margin-top: 0;color:#000; font-weight:500">Orders</h4>
             </div>
             <form class="form-horizontal" method="POST" action="{{ route('post_orders') }}" id="orders_form">
                 {{ csrf_field() }}
@@ -36,7 +37,7 @@
                         <div class="col-sm-12">
                             <table class="table table-striped table-bordered table-hover">
                                 <thead>
-                                <tr class="bg-info">
+                                <tr class="bg-warning">
                                     <th>List of Medications</th>
                                     <th colspan="20">Dosage</th>
                                     <th>Action</th>
@@ -106,7 +107,7 @@
                         <div class="col-sm-6">
                             <table class="table table-striped table-bordered table-hover">
                                 <thead>
-                                <tr class="bg-info">
+                                <tr class="bg-warning">
                                     <th>List of labs</th>
                                     <th>Action</th>
                                 </tr>
@@ -130,7 +131,7 @@
                         <div class="col-sm-6">
                             <table class="table table-striped table-bordered table-hover">
                                 <thead>
-                                 <tr class="bg-info">
+                                 <tr class="bg-warning">
                                     <th>List of procedures</th>
                                     <th>Action</th>
                                  </tr>
@@ -174,7 +175,7 @@
                         <div class="col-sm-6">
                             <table class="table table-striped table-bordered table-hover">
                                 <thead>
-                                <tr class="bg-info">
+                                <tr class="bg-warning">
                                     <th>List of Images</th>
                                     <th>Action</th>
                                 </tr>

@@ -105,16 +105,16 @@
         outline: none;
         width:250%;
         height: 40px;
-        color: #000000;
+        color: #fff;
         font-size: 16px;
-        background: #F0FFFF;
+        background: linear-gradient(#7a5858,#707275);
         cursor: pointer;
         border-radius: 20px;
         -webkit-filter: blur(0.2px);
     }
     .loginBox input[type="submit"]:hover
     {
-        background: #5cd65c;
+        background: linear-gradient(#AD122A, #ad3e06);
         color: #fff;
         text-shadow: 0px 0px 10px black, 0 0 5px white;
         box-shadow: 0 0 15px white;
@@ -211,7 +211,7 @@
 
 
 <div class="loginBox">
-    <img src="/logos/login_panel.png" alt="LoginPanel" style="width: 1200px; height: 800px;margin-left: 10%" >
+    <img src="/logos/login_panel.png" alt="LoginPanel" style="width: 1200px; height: 800px;margin-left: 10%; opacity:0.8" >
     <img src="/logos/Logo.png" style="width: 300px; height: 200px;margin-top: -90%">
     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
         {{ csrf_field() }}
@@ -238,10 +238,10 @@
             <div class="col-md-8 col-md-offset-4">
                 <input id ="password" type="submit" name="" value="Sign In">
 
-                <a class="btn btn-link" href="{{ url('/password/reset') }}">
+                <a class="btn btn-link" style="color:#000" href="{{ url('/password/reset') }}">
                     Forgot Your Password?
                 </a><br>
-                <a class="btn btn-link" href="{{ route('register') }}">
+                <a class="btn btn-link" style="color:#000" href="{{ route('register') }}">
                     Register
                 </a>
             </div>

@@ -10,7 +10,7 @@
         {
             margin-top: 0px;
             margin-bottom: 30px;
-            background: #bdc3c7;
+            background: linear-gradient(#FFE8C3, #f7f5be);
             width: auto; height: 50px;
         }
 
@@ -22,7 +22,7 @@
             width: 100%;
             height: 35px;
             line-height: 35px;
-            background: #bdc3c7;
+            background: linear-gradient(#ffe4ba, #f4f2b2);
             text-align: center;
             color: #000000;
             font-weight: bold;
@@ -38,8 +38,8 @@
             border-left: 1px groove white;
             border-bottom: 1px solid #7B7B78;
             border-right: 1px solid #7B7B78;
-            color: #ffffff;
-            background: #bdc3c7;
+            color: #6d6f71;
+            background: linear-gradient(#ffe4ba, #f4f2b2);
             box-shadow: 1px 1px 2px #888888;
         }
 
@@ -58,8 +58,8 @@
         </div>
         <!-- This button will take the user to a new page where new patient's demographic will be entered -->
         <div class="row">
-            <div class="col-md-2 col-md-offset-1">
-                <a href="#0" id="expandCollapse" class="btn btn-primary" style="background-color: #337ab7; border: transparent;"><b>-</b> Collapse all Modules</a>
+            <div class="col-md-2 col-md-offset-1" >
+                <a href="#0" id="expandCollapse" class="btn btn-primary" style=" border: transparent;"><b>-</b> Collapse all Modules</a>
             </div>
             <div class="col-md-7 col-md-offset-1">
                 <a id="addPatient" href="{{url('/add_patient')}}" class="btn btn-success" style="float: right">
@@ -72,10 +72,10 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default" style="margin-bottom: 0;padding-bottom: 0">
-                    <div class="panel-heading" style="background-color: #5DADE2; padding-bottom: 0">
+                    <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf); padding-bottom: 0">
                         <div class="row">
                             <div class="col-md-2" style="float: left;">
-                                <h4 style="margin-top: 0; padding-top: 6px">Saved Patients</h4>
+                                <h4 style="margin-top: 0; padding-top: 6px; color:#000; font-weight:500">Saved Patients</h4>
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                                             @if($saved_patients)
                                                 <table class="table table-striped table-bordered table-hover" style="float: left;">
                                                     <thead>
-                                                    <tr class="bg-info">
+                                                    <tr class="bg-custom">
                                                         <th>Patient Name</th>
                                                         <th>Age</th>
                                                         {{--<th>Sex</th>--}}
@@ -110,8 +110,8 @@
                                                         @if($patient->module)
                                                             @if($patient->status === 1 && $patient->module->module_name === $module)
                                                                 <tr>
-                                                                    <td>
-                                                                        <a href="{{ route( 'patient.view', ['patient_id' => $patient->patient_id ] ) }}" id="patientName">
+                                                                    <td class="text-danger">
+                                                                        <a href="{{ route( 'patient.view', ['patient_id' => $patient->patient_id ] ) }}" id="patientName" class="text-secondary">
                                                                             <b><?php echo $patient->first_name.' '.$patient->last_name; ?></b>
                                                                         </a>
                                                                     </td>
@@ -148,8 +148,8 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default" style="margin-bottom: 0;padding-bottom: 0">
-                    <div class="panel-heading" style="background-color: #5DADE2; padding-bottom: 0">
-                        <h4 style="margin-top: 0">Submitted Patients</h4>
+                    <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf); padding-bottom: 0">
+                        <h4 style="margin-top: 0; color:#000; font-weight:500">Submitted Patients</h4>
                     </div>
                     <div class="panel-body" style="margin-bottom: 0;padding-bottom: 0">
                         @if(count($submitted_patients_modules)>0)
@@ -166,7 +166,7 @@
                                             @if($submitted_patients)
                                                 <table class="table table-striped table-bordered table-hover" style="float: left;">
                                                     <thead>
-                                                    <tr class="bg-info">
+                                                    <tr class="bg-custom">
                                                         <th>Patient Name</th>
                                                         <th>Submitted Date</th>
                                                         <th>Visit Date</th>
@@ -218,6 +218,11 @@
 
         jQuery(document).ready(function($)
         {
+            if(!!window.performance && window.performance.navigation.type === 2)
+            {
+                console.log('Reloading');
+                window.location.reload();
+            }
 
             $(".plus").hide();
             $(".pluss").hide();

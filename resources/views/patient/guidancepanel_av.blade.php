@@ -18,7 +18,7 @@
     <div class="form-group">
         <div class="row ">
             <div class="col-md-5  pull-right">
-                <button id="mybutton" class="btn btn-info" ><span class="glyphicon glyphicon-remove"style="font-size:15px"></span> Clear All</button>
+                <button id="mybutton" class="btn btn-primary" ><span class="glyphicon glyphicon-remove"style="font-size:15px"></span> Clear All</button>
             </div>
         </div>
         <div class="row">
@@ -36,7 +36,7 @@
                     <option value="1"></option>
                 </select>
             </div>
-            <div class="col-sm-3"><a id="closeaudio" ><span class="glyphicon glyphicon-remove" style="font-size:18px"></span></a></div>
+            <div class="col-sm-3"><a id="closeaudio" ><span class="glyphicon glyphicon-remove" style="font-size:18px; color:#ad122a"></span></a></div>
         </div>
         <br>
         <div class="row">
@@ -60,7 +60,7 @@
                     <option value="1"></option>
                 </select>
             </div>
-            <div class="col-sm-3"><a id="closevideo" ><span class="glyphicon glyphicon-remove" style="font-size:18px"></span></a></div>
+            <div class="col-sm-3"><a id="closevideo" ><span class="glyphicon glyphicon-remove" style="font-size:18px; color:#ad122a"></span></a></div>
 
         </div>
         <br>

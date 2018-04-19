@@ -42,7 +42,7 @@
         <div class="col-md-12">
             <table class="table table-striped table-bordered table-hover" id="ddxtable">
                 <thead>
-                <tr class="bg-info">
+                <tr class="bg-gray">
                     <th>List of Diagnosis</th>
                     <th>Comments</th>
                 </tr>

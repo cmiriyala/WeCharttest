@@ -43,7 +43,7 @@
             font-size: 12px;
             border: none;
             outline: none;
-            background-color: #5DADE2;
+            background: linear-gradient(#04A2C9,#075DBF);
             color: white;
             cursor: pointer;
             padding: 15px;

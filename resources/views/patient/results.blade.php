@@ -6,8 +6,9 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0" id="results_heading">Results</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);
+padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500" id="results_heading">Results</h4>
                 </div>
                 <div class="panel-body ">
                     <form class="form-horizontal" method="POST" action="{{ route('post_results') }}" id="results_form">
@@ -20,7 +21,7 @@
                                 <div class="col-sm-6">
                                     <table class="table table-striped table-bordered table-hover">
                                         <thead>
-                                        <tr class="bg-info">
+                                        <tr class="bg-warning">
                                             <th>List of Ordered Medications</th>
                                             <th colspan="20">Dosage</th>
                                         </tr>
@@ -38,7 +39,7 @@
                                 <div class="col-sm-6">
                                     <table class="table table-striped table-bordered table-hover">
                                         <thead>
-                                        <tr class="bg-info">
+                                        <tr class="bg-warning">
                                             <th>List of Ordered Labs</th>
                                         </tr>
                                         </thead>
@@ -56,7 +57,7 @@
                                 <div class="col-sm-6">
                                     <table class="table table-striped table-bordered table-hover">
                                         <thead>
-                                        <tr class="bg-info">
+                                        <tr class="bg-warning">
                                             <th>List of Ordered Procedures</th>
                                          </tr>
                                         </thead>
@@ -72,7 +73,7 @@
                                 <div class="col-sm-6">
                                     <table class="table table-striped table-bordered table-hover">
                                         <thead>
-                                        <tr class="bg-info">
+                                        <tr class="bg-warning">
                                             <th>List of Ordered Images</th>
                                          </tr>
                                         </thead>

@@ -6,8 +6,8 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue;padding-bottom: 0">
-                    <h4 style="margin-top: 0" id="hpi_heading">History of Present Illness (HPI)</h4>
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf);padding-bottom: 0">
+                    <h4 style="margin-top: 0;color:#000; font-weight:500" id="hpi_heading">History of Present Illness (HPI)</h4>
                 </div>
 
                 <div class="panel-body ">

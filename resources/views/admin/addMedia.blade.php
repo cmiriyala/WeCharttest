@@ -48,7 +48,7 @@
             </div>
             <br>
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: lightblue">
+                <div class="panel-heading" style="background: linear-gradient(#af9999,#b3b8bf)">
                     <h4>Add Media</h4>
                 </div>
                 <div class="panel-body">
@@ -79,7 +79,7 @@
                         @endfor
                         <div style="padding-top: 10px; padding-right: 10px;">
                             <div class="col-md-2" style="float:right">
-                                <a href="#" type="button" id="addmedia" style="color: #3097D1;">
+                                <a href="#" type="button" id="addmedia" style="color: #6f7172;">
                                     <i class="fa fa-plus-circle" aria-hidden="true"></i> Add row
                                 </a>
                             </div>
@@ -131,7 +131,7 @@
                 <div class="panel-body">
                     <table class="table table-bordered table-stripped table-hover" id="media_table">
                         <thead class="blue-grey lighten-4" >
-                        <tr style="font-size: medium;background-color: #e0f2f1">
+                        <tr style="font-size: medium;background-color: #fffadd">
                             <th><i aria-hidden="true"></i> Name</th>
                             <th><i aria-hidden="true"></i> Type</th>
                             <th><i aria-hidden="true"></i> Link</th>
@@ -149,7 +149,7 @@
                                 </td>
                                 <td><a class="linktest" href="<?php echo($mediarow->media_lookup_value_link); ?>" target="_blank"> <?php echo($mediarow->media_lookup_value_link); ?></a></td>
                                 <td>
-                                    <button class="editButton btn btn-info" id="<?php echo $rownum ?>"><i class="fa fa-edit" aria-hidden="true"></i></button>
+                                    <button class="editButton btn btn-primary" id="<?php echo $rownum ?>"><i class="fa fa-edit" aria-hidden="true"></i></button>
                                     <button class="saveButton btn btn-success" id="<?php echo $rownum ?>" value="{{$mediarow->media_lookup_value_id}}"><i class="fa fa-save" aria-hidden="true"></i></button>
                                     <a href="{{ route('delete_media', ['id' => $mediarow->media_lookup_value_id]) }}" class="btn btn-danger enable" id="delete" onclick="return Delete()">
                                         <i class="fa fa-trash-o" aria-hidden="true"></i>
