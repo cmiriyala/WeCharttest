@@ -133,9 +133,8 @@
                                 </div>
                             @endforeach
                         @else
-                            <br>
-                            <br>
                             <p>There are no patients for review.</p>
+                            <br>
                             <br>
                             <p>{{$for_review_message}}</p>
                         @endif
@@ -212,14 +211,14 @@
                             @else
                             <p>There are no reviewed patients</p>
                                 <p>{{$reviewed_message}}</p>
+                            <br>
+                            <br>
                             @endif
                     </div>
                 </div>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
+
     </div>
 
     <script type="text/javascript">

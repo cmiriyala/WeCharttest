@@ -262,7 +262,7 @@
         </script>
 
         @else
-            <div class="col-md-1 col-md-offset-5" style="margin-left:33%;margin-top:85%;position: absolute">
+            <div class="col-md-1 col-md-offset-5" style="margin-left:33%;margin-top:105%;position: absolute">
                 <a href="#aboutus" class="window">About WeChart</a><br>
                 <div id="aboutus" class="popup">
                     <p style="text-align: center; font-size: 120%">About WeChart</p>
@@ -276,7 +276,7 @@
                 </div>
             </div>
             </div>
-            <div class="col-md-1 col-md-offset-5" style="margin-left:108%;margin-top:85%;position: absolute">
+            <div class="col-md-1 col-md-offset-5" style="margin-left:108%;margin-top:105%;position: absolute">
                 <a href="#login-box" class="window">Contact Us</a><br>
                 <div id="login-box" class="popup2">
                     <p style="text-align: center; font-size: 120%">Contact Us</p>
