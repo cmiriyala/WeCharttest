@@ -244,7 +244,7 @@
             <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
     </div>
     <div class="form-group footr" style="border: 0px;padding-bottom: 0px; box-shadow: inset 0 -23px 0 #AC1F2D;margin-bottom: 0%">
-        <img src="/logos/footer.png" alt="Footer" style="height:180px;width:100%;margin-top: 20%;margin-bottom: 0%">
+        <img src="/logos/footer.png" alt="Footer" style="height:180px;width:100%;margin-top: 15%;margin-bottom: 0%">
         <img src="/logos/unmc.png" alt="UNMC logo" style="height: 65px;width: 90px;margin-left: 49%;margin-top: -3.5%;margin-bottom: 0%">
         <div class="col-md-3 col-md-offset-5" style="margin-top: -3.3%;margin-left: 40%;margin-bottom: 0%">
             <a href="#about-us" class="window">About WeChart</a><br>
