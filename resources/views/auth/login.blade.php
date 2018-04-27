@@ -252,7 +252,7 @@
             <div class="col-md-1 col-md-offset-5" style="margin-left:6%;margin-top:21.7vh;position: fixed">
                 <a href="#login-box" class="login-window">About WeChart</a><br>
             </div>
-            <div class="col-md-1 col-md-offset-5" style="margin-left:17%;margin-top:21.7vh;position: fixed">
+            <div class="col-md-1 col-md-offset-5" style="margin-left:18%;margin-top:21.7vh;position: fixed">
                 <a href="#">Contact us</a>
             </div>
         <script>
