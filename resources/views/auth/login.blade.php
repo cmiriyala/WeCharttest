@@ -145,7 +145,7 @@
     /* You can customize to your needs  */
     .popup {
         display: none;
-        background: rgba(93, 173, 226, 1);
+        background: rgba(93, 173, 226, 0.8);
         padding: 10px;
         color: white;
         font-weight: bold;
@@ -171,7 +171,7 @@
 
     .popup2 {
         display: none;
-        background: rgba(93, 173, 226, 1);
+        background: rgba(93, 173, 226, 0.8);
         padding: 10px;
         color: white;
         font-weight: bold;
@@ -267,7 +267,7 @@
                 <div id="aboutus" class="popup">
                     <p style="text-align: center; font-size: 120%">About WeChart</p>
                     <hr style="border-width: 2px;margin-left: 35%;margin-right: 35%;">
-                    <p style="text-align: center;">The process of medical documentation is a vital skill for all allied health professionals.  The written record is essential for communication of the patient’s status to ensure proper treatment while minimizing adverse outcomes. Medical errors represent a serious threat to patient safety and have been estimated to add millions to the global healthcare cost.
+                    <p>The process of medical documentation is a vital skill for all allied health professionals.  The written record is essential for communication of the patient’s status to ensure proper treatment while minimizing adverse outcomes. Medical errors represent a serious threat to patient safety and have been estimated to add millions to the global healthcare cost.
                     <br>
                     <br>
                     Unfortunately, students are often expected to develop this skill during the clinical exposure phase of their education with minimal guidance.
