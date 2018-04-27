@@ -249,10 +249,10 @@
     </form>
     <div class="form-group">
         @if ($errors->has('email'))
-            <div class="col-md-1 col-md-offset-5" style="margin-left:6%;margin-top:22.7vh;position: fixed">
+            <div class="col-md-1 col-md-offset-5" style="margin-left:6%;margin-top:21.7vh;position: fixed">
                 <a href="#login-box" class="login-window">About WeChart</a><br>
             </div>
-            <div class="col-md-1 col-md-offset-5" style="margin-left:19%;margin-top:22.7vh;position: fixed">
+            <div class="col-md-1 col-md-offset-5" style="margin-left:17%;margin-top:21.7vh;position: fixed">
                 <a href="#">Contact us</a>
             </div>
         <script>
@@ -262,7 +262,7 @@
         </script>
 
         @else
-            <div class="col-md-1 col-md-offset-5" style="margin-left:6vw;margin-top:24vh;position: absolute">
+            <div class="col-md-1 col-md-offset-5" style="margin-left:6vw;margin-top:25vh;position: absolute">
                 <a href="#aboutus" class="window">About WeChart</a><br>
                 <div id="aboutus" class="popup">
                     <p style="text-align: center; font-size: 120%">About WeChart</p>
@@ -276,7 +276,7 @@
                 </div>
             </div>
             </div>
-            <div class="col-md-1 col-md-offset-5" style="margin-left:16vw;margin-top:24vh;position: absolute">
+            <div class="col-md-1 col-md-offset-5" style="margin-left:18vw;margin-top:25vh;position: absolute">
                 <a href="#login-box" class="window">Contact Us</a><br>
                 <div id="login-box" class="popup2">
                     <p style="text-align: center; font-size: 120%">Contact Us</p>
