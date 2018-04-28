@@ -277,7 +277,7 @@
             </div>
             </div>
             <div class="col-md-1 col-md-offset-5" style="margin-left:18vw;margin-top:25vh;position: absolute">
-                <a href="#login-box" class="window">Contact Us</a><br>
+                <a href="#login-box" class="window2">Contact Us</a><br>
                 <div id="login-box" class="popup2">
                     <p style="text-align: center; font-size: 120%">Contact Us</p>
                     <hr style="border-width: 2px;margin-left: 35%;margin-right: 35%;">
@@ -314,7 +314,22 @@
             $(loginBox).fadeIn(300);
 
             // Add the mask to body
-            $('body').append('<div id="mask"></div>');
+            $('body').append('<div id="mask"><img style="height: 2em; width: 2em;margin-left: 33em; margin-top:-18.9em" src="/logos/close.png" class="btn_close" title="Close Window" alt="Close" /></div>');
+            $('#mask').fadeIn(300);
+
+            return false;
+        });
+
+        $('a.window2').click(function() {
+
+            // Getting the variable's value from a link
+            var loginBox = $(this).attr('href');
+
+            //Fade in the Popup and add close button
+            $(loginBox).fadeIn(300);
+
+            // Add the mask to body
+            $('body').append('<div id="mask"><img style="height: 2em; width: 2em;margin-left: 22em; margin-top:-18.9em" src="/logos/close.png" class="btn_close" title="Close Window" alt="Close" /></div>');
             $('#mask').fadeIn(300);
 
             return false;

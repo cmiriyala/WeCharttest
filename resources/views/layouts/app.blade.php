@@ -114,6 +114,11 @@
             /* Safari, Chrome */;
         }
 
+        img.btn_close {
+            float: right;
+            margin: -28px -28px 0 0;
+        }
+
         fieldset {
             border: none;
         }
@@ -249,6 +254,7 @@
         <div class="col-md-3 col-md-offset-5" style="margin-top: -2.8%;margin-left: 40%;margin-bottom: 0%">
             <a href="#about-us" class="window">About WeChart</a><br>
             <div id="about-us" class="popup">
+                <a href="#" class="close"><img src="/logos/close.png" class="btn_close" title="Close Window" alt="Close" /></a>
                 <p style="text-align: center; font-size: 120%">About WeChart</p>
                 <hr style="border-width: 2px;margin-left: 35%;margin-right: 35%;">
                 <p>The process of medical documentation is a vital skill for all allied health professionals.  The written record is essential for communication of the patient’s status to ensure proper treatment while minimizing adverse outcomes. Medical errors represent a serious threat to patient safety and have been estimated to add millions to the global healthcare cost.
@@ -262,6 +268,7 @@
         <div class="col-md-3 col-md-offset-5" style="margin-top: -2.8%;margin-left: 54.5%;margin-bottom: 0%">
             <a href="#contact-us" class="window">Contact Us</a><br>
             <div id="contact-us" class="popup2">
+                <a href="#" class="close"><img src="/logos/close.png" class="btn_close" title="Close Window" alt="Close" /></a>
                 <p style="text-align: center; font-size: 120%">Contact Us</p>
                 <hr style="border-width: 2px;margin-left: 35%;margin-right: 35%;">
                 <p style="text-align: center;">Project Lead:<br>
