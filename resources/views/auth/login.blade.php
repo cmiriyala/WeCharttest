@@ -267,7 +267,7 @@
                 <div id="aboutus" class="popup">
                     <p style="text-align: center; font-size: 120%">About WeChart</p>
                     <hr style="border-width: 2px;margin-left: 35%;margin-right: 35%;">
-                    <p>The process of medical documentation is a vital skill for all allied health professionals.  The written record is essential for communication of the patient’s status to ensure proper treatment while minimizing adverse outcomes. Medical errors represent a serious threat to patient safety and have been estimated to add millions to the global healthcare cost.
+                    <p style="text-align: right">The process of medical documentation is a vital skill for all allied health professionals.  The written record is essential for communication of the patient’s status to ensure proper treatment while minimizing adverse outcomes. Medical errors represent a serious threat to patient safety and have been estimated to add millions to the global healthcare cost.
                     <br>
                     <br>
                     Unfortunately, students are often expected to develop this skill during the clinical exposure phase of their education with minimal guidance.
